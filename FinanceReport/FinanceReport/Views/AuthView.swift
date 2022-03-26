@@ -10,7 +10,6 @@ import SwiftUI
 
 let screenSize = UIScreen.main.bounds
 
-
 extension View {
     func dismissKeyboard() {
         UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
@@ -28,24 +27,13 @@ struct AuthView: View {
     @State private var isShowAlert = false
     @State private var alertMessage = ""
     
+    @State private var isMainPageShow = false
+    
     var body: some View {
         
         NavigationView {
             
             ZStack {
-                
-                if isKeyboardOpened == false {
-                    
-                    VStack{
-                        Spacer()
-                        NavigationLink(destination: MainPageView()){
-                            Text("Войти без регистрации")
-                                .padding(.bottom, 60)
-                                .font(.custom("AvenirNext", size: 16))
-                                .foregroundColor(.black)
-                        }
-                    }
-                } // кнопка входа без регистрации
                 
                 ZStack{
                     
@@ -84,25 +72,52 @@ struct AuthView: View {
                                 Button {
                                     if isAuth {
                                         print("Авторизация")
+                                        isMainPageShow.toggle()
+                                        
+                                      /*  AuthService.shared.signIn(email: self.login,
+                                                                  password: self.password) { result in
+                                            switch result {
+                                                
+                                            case .success(let user):
+                                                
+                                                NavigationLink(destination: MainPageView())
+                                                
+                                            case .failure(let error):
+                                                
+                                                alertMessage = "Ошибка Авторизации! \(error.localizedDescription)"
+                                                isShowAlert.toggle()
+                                            }
+                                        } */
                                     } else {
                                         print("Регистрация")
                                         
                                         guard password == confirmPassword else {
-                                            
                                             self.alertMessage = "Пароли не совпадают"
                                             isShowAlert.toggle()
                                             return
                                         }
                                         
-                                        AuthService.shared.signUp(email: login,
-                                        password: password)
-                                        
-                                        (let user):
-                                        print("Успех")
-                                        login = ""
-                                        password = ""
-                                        confirmPassword = ""
-                                        self.alertMessage = "Вы успешно зарегистрировались с email: \(user.email!)"
+                                        AuthService.shared.signUp(email: self.login,
+                                                                  password: self.password) { result in
+                                            switch result {
+                                                
+                                            case .success(let user):
+                                                
+                                                alertMessage = "Вы успешно зарегистрировались с email: \(user.email!)"
+                                                
+                                                print("Успех")
+                                                self.isShowAlert.toggle()
+                                                self.isAuth.toggle()
+                                                self.login = ""
+                                                self.password = ""
+                                                self.confirmPassword = ""
+                                                
+                                            case .failure(let error):
+                                                
+                                                alertMessage = "Ошибка регистрации! \(error.localizedDescription)"
+                                                self.isShowAlert.toggle()
+                                            }
+                                        }
                                     }
                                 } label: {
                                     Text(isAuth ? "Войти" : "Зарегистрироваться")
@@ -134,6 +149,9 @@ struct AuthView: View {
                         .offset(y: -50)
                         .animation(.easeInOut(duration: 0.3), value: isAuth)
                         .shadow(radius: 12)
+                        .fullScreenCover(isPresented: $isMainPageShow, content: {
+                            MainPageView()
+                        })
                         .alert(self.alertMessage, isPresented: $isShowAlert) {
                             Button {
                                 

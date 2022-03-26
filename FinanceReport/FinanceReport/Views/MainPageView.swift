@@ -34,6 +34,8 @@ struct MainPageView: View {
 
 struct UpperBar: View { // Верхнее меню управления
 
+    @Environment(\.dismiss) var dismiss
+    
     var body: some View {
         ZStack{
             HStack {
@@ -53,20 +55,21 @@ struct UpperBar: View { // Верхнее меню управления
 
 struct MyFunds: View { // Мои Накопления
     
-    @State private var myFunds = MoneySum()
-    @State private var myDuties = MoneySum()
+    @State private var isMyFundsShow = false
     
     var body: some View {
         
         VStack {
             
-            NavigationLink(destination: MyFundsView()) {
+            Button{
+                isMyFundsShow.toggle()
+            }label: {
                 VStack {
                     HStack {
                         VStack(alignment: .leading) {
                             Text("Мои накопления")
                             HStack(spacing: 0) {
-                                Text("\(myFunds.myFundsSum)")
+                                Text("")
                                 Text("₽")
                             }
                         }
@@ -90,13 +93,14 @@ struct MyFunds: View { // Мои Накопления
         .padding(.top, 20)
         .padding(.bottom, 10)
         .shadow(radius: 6)
-        
+        .fullScreenCover(isPresented: $isMyFundsShow, content: {
+            FundsTabView()
+        })
     }
 }
 
 struct LastMonth: View { // Перенос с прошлого месяца
-    
-    @State private var lastMonthMoney = MoneySum()
+
     @State var showSheet: Bool = false
     
     var body: some View {
@@ -110,7 +114,7 @@ struct LastMonth: View { // Перенос с прошлого месяца
                             VStack(alignment: .leading) {
                                 Text("Перенос с прошлого месяца")
                                 HStack(spacing: 0) {
-                                    Text("\(lastMonthMoney.lastMonthMoneySum)")
+                                    Text("")
                                     Text("₽")
                                 }
                             }
@@ -139,9 +143,7 @@ struct LastMonth: View { // Перенос с прошлого месяца
 }
 
 struct PlanningTab: View{ // Предполагаемые доходы
-    
-    @ObservedObject var planningMoney = MoneySum()
-    
+
     var body: some View {
         
         VStack (spacing: 0) {
@@ -154,7 +156,7 @@ struct PlanningTab: View{ // Предполагаемые доходы
                         VStack(alignment: .leading) {
                             Text("Предполагаемые доходы")
                             HStack(spacing: 0) {
-                                Text("\(planningMoney.planningIncomesSum)")
+                                Text("")
                                 Text("₽")
                             }
                         }
@@ -179,7 +181,7 @@ struct PlanningTab: View{ // Предполагаемые доходы
                         VStack(alignment: .leading) {
                             Text("Планируемые расходы")
                             HStack(spacing: 0) {
-                                Text("\(planningMoney.lastMonthMoneySum +       planningMoney.planningIncomesSum - planningMoney.planningExpensesSum)")
+                                Text("")
                                 Text("₽")
                             }
                         }
@@ -202,7 +204,7 @@ struct PlanningTab: View{ // Предполагаемые доходы
                     VStack(alignment: .leading) {
                         Text("Предполагаемый остаток")
                         HStack(spacing: 0) {
-                            Text("\(planningMoney.planningRemainderSum)")
+                            Text("")
                             Text("₽")
                         }
                     }
@@ -228,8 +230,6 @@ struct PlanningTab: View{ // Предполагаемые доходы
 
 struct FactTab: View { // Фактические доходы и расходы
     
-    @ObservedObject var factMoney = MoneySum()
-    
     var body: some View {
         
         VStack (spacing: 0) {
@@ -242,7 +242,7 @@ struct FactTab: View { // Фактические доходы и расходы
                         VStack(alignment: .leading) {
                             Text("Фактические доходы")
                             HStack(spacing: 0) {
-                                Text("\(factMoney.factIncomesSum)")
+                                Text("")
                                 Text("₽")
                             }
                         }
@@ -267,7 +267,7 @@ struct FactTab: View { // Фактические доходы и расходы
                         VStack(alignment: .leading) {
                             Text("Фактические расходы")
                             HStack(spacing: 0) {
-                                Text("\(factMoney.factExpensesSum)")
+                                Text("")
                                 Text("₽")
                             }
                         }
@@ -292,7 +292,7 @@ struct FactTab: View { // Фактические доходы и расходы
                         VStack(alignment: .leading) {
                             Text("Средства на руках")
                             HStack(spacing: 0) {
-                                Text("\(factMoney.lastMonthMoneySum + factMoney.factIncomesSum - factMoney.factExpensesSum)")
+                                Text("")
                                 Text("₽")
                             }
                         }

@@ -6,21 +6,24 @@
 //
 
 import Foundation
+import Firebase
 import FirebaseAuth
 
 class AuthService {
     
     static let shared = AuthService()
     
+    private init() {}
+    
     private let auth = Auth.auth()
     
-    private var currentUser : User? {
+    var currentUser: User? {
         return auth.currentUser
     }
     
-    private init() {}
-    
-    func signUp(email: String?, password: String?, completion: @escaping(Result<User, Error>) -> Void) {
+    func signUp(email: String?,
+                password: String?,
+                completion: @escaping(Result<User, Error>) -> ()) {
         
         guard let email = email else {
             completion(.failure(MyErrors.invalidEmail))
@@ -33,8 +36,7 @@ class AuthService {
         }
         
         auth.createUser(withEmail: email,
-                        password: password) {
-            result, error in
+                        password: password) { result, error in
             
             if let result = result {
                 completion(.success(result.user))
@@ -48,6 +50,7 @@ class AuthService {
 
 enum MyErrors: Error {
     
-case invalidEmail
-case invalidPassword
+    case invalidEmail
+    case invalidPassword
+    
 }
