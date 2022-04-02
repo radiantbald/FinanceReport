@@ -9,6 +9,8 @@ import SwiftUI
 
 struct MainPageView: View {
     
+    var viewModel: MainPageViewModel
+    
     var body: some View {
        
             ZStack {
@@ -55,6 +57,8 @@ struct UpperBar: View { // Верхнее меню управления
 
 struct MyFunds: View { // Мои Накопления
     
+    @ObservedObject var viewModel = FundsViewModel.shared
+    
     @State private var isMyFundsShow = false
     
     var body: some View {
@@ -69,7 +73,7 @@ struct MyFunds: View { // Мои Накопления
                         VStack(alignment: .leading) {
                             Text("Мои накопления")
                             HStack(spacing: 0) {
-                                Text("")
+                                Text("\(viewModel.sumFunds())")
                                 Text("₽")
                             }
                         }
@@ -318,11 +322,11 @@ struct FactTab: View { // Фактические доходы и расходы
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        Group {
-            MainPageView()
-                .previewInterfaceOrientation(.portrait)
-        }
-    }
-}
+//struct ContentView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        Group {
+//            MainPageView(viewModel: MainPageViewModel(user))
+//                .previewInterfaceOrientation(.portrait)
+//        }
+//    }
+//}

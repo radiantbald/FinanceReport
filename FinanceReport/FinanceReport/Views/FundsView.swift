@@ -11,20 +11,27 @@ struct FundsView: View {
     
     @ObservedObject var viewModel = FundsViewModel.shared
     
+    @State private var isActionSheetShow = false
+    
+    @State var fundToDelete: FundModel?
+   
+    
     var body: some View {
         
         ZStack{
             VStack{
                 List{
+                    Text("\(viewModel.sumFunds())")
                     ForEach(viewModel.fundsArray, id: \.self) { fund in
                         ListRowFundsView(fund: fund)
                             .swipeActions {
                                 Button {
-                                    viewModel.fundsArray.removeAll() { deleteFund in
-                                        deleteFund.id == fund.id
-                                    }
+                                    self.fundToDelete = fund
+                                    isActionSheetShow.toggle()
                                 } label: {
                                     Text("Удалить")
+                                        .background(Color.red)
+                                        .foregroundColor(.white)
                                 }
                             }
                     }
@@ -33,11 +40,14 @@ struct FundsView: View {
                     
                     Button {
                         viewModel.fundsArray.append(FundModel())
+                        print("\(viewModel.fundsArray)")
+                        print("\(viewModel)")
                     } label: {
                         HStack {
                             Spacer()
                             Text("Добавить новый счет")
                                 .frame(height: 60)
+                           
                             
                             Spacer()
                         }
@@ -45,6 +55,21 @@ struct FundsView: View {
                     
                 }
                 .listStyle(PlainListStyle())
+                .confirmationDialog("Точно удалить?", isPresented: $isActionSheetShow, titleVisibility: .visible) {
+                    Button{
+                        viewModel.fundsArray.removeAll() { deletedFund in
+                            deletedFund.id == fundToDelete!.id
+                        }
+                    } label: {
+                        Text("Да")
+                    }
+                    
+                    Button(role: .cancel) {
+                        //нет действия
+                    } label: {
+                        Text("Нет")
+                    }
+                }
             }
         }
         //.navigationBarHidden(/*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/)

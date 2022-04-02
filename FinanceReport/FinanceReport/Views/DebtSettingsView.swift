@@ -1,17 +1,17 @@
 //
-//  FundSettingsView.swift
+//  DebtSettingsView.swift
 //  FinanceReport
 //
-//  Created by Олег Попов on 22.03.2022.
+//  Created by Олег Попов on 29.03.2022.
 //
 
 import SwiftUI
 
-struct FundSettingsView: View {
+struct DebtSettingsView: View {
     
     @Environment(\.dismiss) var dismiss
     
-    @State var viewModel: FundSettingsViewModel
+    @State var viewModel: DebtSettingsViewModel
     
     var body: some View {
         ZStack {
@@ -27,7 +27,7 @@ struct FundSettingsView: View {
                     Spacer()
                     
                     Button {
-                        FundsViewModel.shared.setFund(fund: viewModel.fund)
+                        DebtsViewModel.shared.setDebt(debt: viewModel.debt)
                         
                         self.dismiss()
                     } label: {
@@ -36,13 +36,13 @@ struct FundSettingsView: View {
                     }
                 }
                 VStack{
-                    TextField("Название счета", text: $viewModel.fund.name)
+                    TextField("Кому должен", text: $viewModel.debt.name)
                         .padding()
                         .background(.white)
                         .cornerRadius(12)
                         .shadow(radius: 6)
                     
-                    TextField("Средств на счете", value: $viewModel.fund.score, formatter: NumberFormatter())
+                    TextField("Сколько должен", value: $viewModel.debt.score, formatter: NumberFormatter())
                         .keyboardType(.numberPad)
                         .padding()
                         .background(.white)
@@ -66,8 +66,8 @@ struct FundSettingsView: View {
     }
 }
 
-struct FundSettingsView_Previews: PreviewProvider {
+struct DebtSettingsView_Previews: PreviewProvider {
     static var previews: some View {
-        FundSettingsView(viewModel: FundSettingsViewModel(fund: FundModel()))
+        DebtSettingsView(viewModel: DebtSettingsViewModel(debt: DebtModel()))
     }
 }

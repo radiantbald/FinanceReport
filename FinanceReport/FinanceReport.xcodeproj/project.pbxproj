@@ -8,15 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		361FFC1327C281F50020F731 /* MainPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FFC1227C281F50020F731 /* MainPageView.swift */; };
+		3632499227F3047C00D36D1E /* MainPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3632499127F3047C00D36D1E /* MainPageViewModel.swift */; };
+		3632499527F309E100D36D1E /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 3632499427F309E100D36D1E /* FirebaseAuth */; };
+		3632499727F309E100D36D1E /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 3632499627F309E100D36D1E /* FirebaseFirestore */; };
+		3632499927F309E100D36D1E /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 3632499827F309E100D36D1E /* FirebaseStorage */; };
+		3632499F27F31BDF00D36D1E /* DebtModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3632499E27F31BDF00D36D1E /* DebtModel.swift */; };
+		363249A127F31C2000D36D1E /* ListRowDebtsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363249A027F31C2000D36D1E /* ListRowDebtsView.swift */; };
+		363249A327F31CE000D36D1E /* DebtsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363249A227F31CE000D36D1E /* DebtsViewModel.swift */; };
+		363249A527F31D7500D36D1E /* DebtSettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363249A427F31D7500D36D1E /* DebtSettingsViewModel.swift */; };
+		363249A727F31DDB00D36D1E /* DebtSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363249A627F31DDB00D36D1E /* DebtSettingsView.swift */; };
+		363249A927F322BB00D36D1E /* MyFundsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363249A827F322BB00D36D1E /* MyFundsModel.swift */; };
+		363249AB27F3247F00D36D1E /* MyFundsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363249AA27F3247F00D36D1E /* MyFundsViewModel.swift */; };
 		365C4D7727EF80CD008FEA61 /* FundsTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365C4D7627EF80CD008FEA61 /* FundsTabView.swift */; };
 		365C4D7927EF8368008FEA61 /* FundsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365C4D7827EF8368008FEA61 /* FundsView.swift */; };
 		365C4D7B27EF83F1008FEA61 /* DebtsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365C4D7A27EF83F1008FEA61 /* DebtsView.swift */; };
 		365C4D7E27EF8854008FEA61 /* FundSettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365C4D7D27EF8854008FEA61 /* FundSettingsViewModel.swift */; };
-		365E70F927DF40F400E0EA8F /* MyFundsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365E70F827DF40F400E0EA8F /* MyFundsView.swift */; };
 		368F2C7327E8533B0042A93B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 368F2C7227E8533B0042A93B /* GoogleService-Info.plist */; };
-		368F2C7727E86A020042A93B /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 368F2C7627E86A020042A93B /* FirebaseAuth */; };
-		368F2C7927E86A020042A93B /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 368F2C7827E86A020042A93B /* FirebaseFirestore */; };
-		368F2C7B27E86A020042A93B /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 368F2C7A27E86A020042A93B /* FirebaseStorage */; };
 		368F2C7D27E86EE00042A93B /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368F2C7C27E86EE00042A93B /* AuthService.swift */; };
 		368F2C8027EA16CD0042A93B /* FundSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368F2C7F27EA16CD0042A93B /* FundSettingsView.swift */; };
 		36A2662B27EF0003006BC749 /* FundsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A2662A27EF0003006BC749 /* FundsViewModel.swift */; };
@@ -24,18 +31,25 @@
 		36C20E5227BE3B5A00F7329A /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C20E5127BE3B5A00F7329A /* AuthView.swift */; };
 		36C20E5427BE3B5A00F7329A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36C20E5327BE3B5A00F7329A /* Assets.xcassets */; };
 		36C20E5727BE3B5A00F7329A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36C20E5627BE3B5A00F7329A /* Preview Assets.xcassets */; };
-		36D8A39C27E1CD2100803AD5 /* DateFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D8A39B27E1CD2100803AD5 /* DateFeature.swift */; };
+		36D8A39C27E1CD2100803AD5 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D8A39B27E1CD2100803AD5 /* DateFormatter.swift */; };
 		36D8A3AC27E25C3100803AD5 /* ListRowFundsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D8A3AB27E25C3100803AD5 /* ListRowFundsView.swift */; };
 		36E01E6227EE2AE20078A907 /* FundModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E01E6127EE2AE20078A907 /* FundModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		361FFC1227C281F50020F731 /* MainPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageView.swift; sourceTree = "<group>"; };
+		3632499127F3047C00D36D1E /* MainPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageViewModel.swift; sourceTree = "<group>"; };
+		3632499E27F31BDF00D36D1E /* DebtModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebtModel.swift; sourceTree = "<group>"; };
+		363249A027F31C2000D36D1E /* ListRowDebtsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRowDebtsView.swift; sourceTree = "<group>"; };
+		363249A227F31CE000D36D1E /* DebtsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebtsViewModel.swift; sourceTree = "<group>"; };
+		363249A427F31D7500D36D1E /* DebtSettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebtSettingsViewModel.swift; sourceTree = "<group>"; };
+		363249A627F31DDB00D36D1E /* DebtSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebtSettingsView.swift; sourceTree = "<group>"; };
+		363249A827F322BB00D36D1E /* MyFundsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFundsModel.swift; sourceTree = "<group>"; };
+		363249AA27F3247F00D36D1E /* MyFundsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFundsViewModel.swift; sourceTree = "<group>"; };
 		365C4D7627EF80CD008FEA61 /* FundsTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundsTabView.swift; sourceTree = "<group>"; };
 		365C4D7827EF8368008FEA61 /* FundsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundsView.swift; sourceTree = "<group>"; };
 		365C4D7A27EF83F1008FEA61 /* DebtsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebtsView.swift; sourceTree = "<group>"; };
 		365C4D7D27EF8854008FEA61 /* FundSettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundSettingsViewModel.swift; sourceTree = "<group>"; };
-		365E70F827DF40F400E0EA8F /* MyFundsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFundsView.swift; sourceTree = "<group>"; };
 		368F2C7227E8533B0042A93B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		368F2C7C27E86EE00042A93B /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		368F2C7F27EA16CD0042A93B /* FundSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundSettingsView.swift; sourceTree = "<group>"; };
@@ -45,7 +59,7 @@
 		36C20E5127BE3B5A00F7329A /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
 		36C20E5327BE3B5A00F7329A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		36C20E5627BE3B5A00F7329A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		36D8A39B27E1CD2100803AD5 /* DateFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFeature.swift; sourceTree = "<group>"; };
+		36D8A39B27E1CD2100803AD5 /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
 		36D8A3AB27E25C3100803AD5 /* ListRowFundsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRowFundsView.swift; sourceTree = "<group>"; };
 		36E01E6127EE2AE20078A907 /* FundModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -55,19 +69,32 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				368F2C7727E86A020042A93B /* FirebaseAuth in Frameworks */,
-				368F2C7927E86A020042A93B /* FirebaseFirestore in Frameworks */,
-				368F2C7B27E86A020042A93B /* FirebaseStorage in Frameworks */,
+				3632499527F309E100D36D1E /* FirebaseAuth in Frameworks */,
+				3632499727F309E100D36D1E /* FirebaseFirestore in Frameworks */,
+				3632499927F309E100D36D1E /* FirebaseStorage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		363249AC27F3248900D36D1E /* MyFunds */ = {
+			isa = PBXGroup;
+			children = (
+				363249AA27F3247F00D36D1E /* MyFundsViewModel.swift */,
+				36A2662A27EF0003006BC749 /* FundsViewModel.swift */,
+				365C4D7D27EF8854008FEA61 /* FundSettingsViewModel.swift */,
+				363249A227F31CE000D36D1E /* DebtsViewModel.swift */,
+				363249A427F31D7500D36D1E /* DebtSettingsViewModel.swift */,
+			);
+			path = MyFunds;
+			sourceTree = "<group>";
+		};
 		365C4D7C27EF8580008FEA61 /* Components */ = {
 			isa = PBXGroup;
 			children = (
 				36D8A3AB27E25C3100803AD5 /* ListRowFundsView.swift */,
+				363249A027F31C2000D36D1E /* ListRowDebtsView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -83,7 +110,7 @@
 		369F6DD527EC65730088C6F6 /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				36D8A39B27E1CD2100803AD5 /* DateFeature.swift */,
+				36D8A39B27E1CD2100803AD5 /* DateFormatter.swift */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -131,7 +158,9 @@
 		36D8A39927E1CAFB00803AD5 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				363249A827F322BB00D36D1E /* MyFundsModel.swift */,
 				36E01E6127EE2AE20078A907 /* FundModel.swift */,
+				3632499E27F31BDF00D36D1E /* DebtModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -141,11 +170,11 @@
 			children = (
 				36C20E5127BE3B5A00F7329A /* AuthView.swift */,
 				361FFC1227C281F50020F731 /* MainPageView.swift */,
-				365E70F827DF40F400E0EA8F /* MyFundsView.swift */,
 				365C4D7627EF80CD008FEA61 /* FundsTabView.swift */,
 				365C4D7827EF8368008FEA61 /* FundsView.swift */,
 				365C4D7A27EF83F1008FEA61 /* DebtsView.swift */,
 				368F2C7F27EA16CD0042A93B /* FundSettingsView.swift */,
+				363249A627F31DDB00D36D1E /* DebtSettingsView.swift */,
 				365C4D7C27EF8580008FEA61 /* Components */,
 			);
 			path = Views;
@@ -154,8 +183,8 @@
 		36D8A3A627E1D37F00803AD5 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				36A2662A27EF0003006BC749 /* FundsViewModel.swift */,
-				365C4D7D27EF8854008FEA61 /* FundSettingsViewModel.swift */,
+				3632499127F3047C00D36D1E /* MainPageViewModel.swift */,
+				363249AC27F3248900D36D1E /* MyFunds */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -177,9 +206,9 @@
 			);
 			name = FinanceReport;
 			packageProductDependencies = (
-				368F2C7627E86A020042A93B /* FirebaseAuth */,
-				368F2C7827E86A020042A93B /* FirebaseFirestore */,
-				368F2C7A27E86A020042A93B /* FirebaseStorage */,
+				3632499427F309E100D36D1E /* FirebaseAuth */,
+				3632499627F309E100D36D1E /* FirebaseFirestore */,
+				3632499827F309E100D36D1E /* FirebaseStorage */,
 			);
 			productName = FinanceReport;
 			productReference = 36C20E4C27BE3B5A00F7329A /* FinanceReport.app */;
@@ -210,7 +239,7 @@
 			);
 			mainGroup = 36C20E4327BE3B5A00F7329A;
 			packageReferences = (
-				368F2C7527E86A020042A93B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				3632499327F309E100D36D1E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 36C20E4D27BE3B5A00F7329A /* Products */;
 			projectDirPath = "";
@@ -239,18 +268,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				363249A927F322BB00D36D1E /* MyFundsModel.swift in Sources */,
+				363249A727F31DDB00D36D1E /* DebtSettingsView.swift in Sources */,
 				36E01E6227EE2AE20078A907 /* FundModel.swift in Sources */,
 				368F2C8027EA16CD0042A93B /* FundSettingsView.swift in Sources */,
+				363249A327F31CE000D36D1E /* DebtsViewModel.swift in Sources */,
+				363249A127F31C2000D36D1E /* ListRowDebtsView.swift in Sources */,
+				363249AB27F3247F00D36D1E /* MyFundsViewModel.swift in Sources */,
 				365C4D7E27EF8854008FEA61 /* FundSettingsViewModel.swift in Sources */,
-				36D8A39C27E1CD2100803AD5 /* DateFeature.swift in Sources */,
+				36D8A39C27E1CD2100803AD5 /* DateFormatter.swift in Sources */,
+				363249A527F31D7500D36D1E /* DebtSettingsViewModel.swift in Sources */,
 				365C4D7727EF80CD008FEA61 /* FundsTabView.swift in Sources */,
 				36D8A3AC27E25C3100803AD5 /* ListRowFundsView.swift in Sources */,
+				3632499F27F31BDF00D36D1E /* DebtModel.swift in Sources */,
 				365C4D7927EF8368008FEA61 /* FundsView.swift in Sources */,
 				36C20E5227BE3B5A00F7329A /* AuthView.swift in Sources */,
-				365E70F927DF40F400E0EA8F /* MyFundsView.swift in Sources */,
 				365C4D7B27EF83F1008FEA61 /* DebtsView.swift in Sources */,
 				36C20E5027BE3B5A00F7329A /* FinanceReportApp.swift in Sources */,
 				361FFC1327C281F50020F731 /* MainPageView.swift in Sources */,
+				3632499227F3047C00D36D1E /* MainPageViewModel.swift in Sources */,
 				36A2662B27EF0003006BC749 /* FundsViewModel.swift in Sources */,
 				368F2C7D27E86EE00042A93B /* AuthService.swift in Sources */,
 			);
@@ -457,7 +493,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		368F2C7527E86A020042A93B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+		3632499327F309E100D36D1E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
 			requirement = {
@@ -468,19 +504,19 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		368F2C7627E86A020042A93B /* FirebaseAuth */ = {
+		3632499427F309E100D36D1E /* FirebaseAuth */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 368F2C7527E86A020042A93B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			package = 3632499327F309E100D36D1E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAuth;
 		};
-		368F2C7827E86A020042A93B /* FirebaseFirestore */ = {
+		3632499627F309E100D36D1E /* FirebaseFirestore */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 368F2C7527E86A020042A93B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			package = 3632499327F309E100D36D1E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseFirestore;
 		};
-		368F2C7A27E86A020042A93B /* FirebaseStorage */ = {
+		3632499827F309E100D36D1E /* FirebaseStorage */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 368F2C7527E86A020042A93B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			package = 3632499327F309E100D36D1E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseStorage;
 		};
 /* End XCSwiftPackageProductDependency section */
