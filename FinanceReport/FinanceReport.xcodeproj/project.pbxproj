@@ -23,6 +23,7 @@
 		365C4D7927EF8368008FEA61 /* FundsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365C4D7827EF8368008FEA61 /* FundsView.swift */; };
 		365C4D7B27EF83F1008FEA61 /* DebtsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365C4D7A27EF83F1008FEA61 /* DebtsView.swift */; };
 		365C4D7E27EF8854008FEA61 /* FundSettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365C4D7D27EF8854008FEA61 /* FundSettingsViewModel.swift */; };
+		36811AB127F9786F0024E528 /* MyFundsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36811AB027F9786F0024E528 /* MyFundsView.swift */; };
 		368F2C7327E8533B0042A93B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 368F2C7227E8533B0042A93B /* GoogleService-Info.plist */; };
 		368F2C7D27E86EE00042A93B /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368F2C7C27E86EE00042A93B /* AuthService.swift */; };
 		368F2C8027EA16CD0042A93B /* FundSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368F2C7F27EA16CD0042A93B /* FundSettingsView.swift */; };
@@ -50,6 +51,7 @@
 		365C4D7827EF8368008FEA61 /* FundsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundsView.swift; sourceTree = "<group>"; };
 		365C4D7A27EF83F1008FEA61 /* DebtsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebtsView.swift; sourceTree = "<group>"; };
 		365C4D7D27EF8854008FEA61 /* FundSettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundSettingsViewModel.swift; sourceTree = "<group>"; };
+		36811AB027F9786F0024E528 /* MyFundsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFundsView.swift; sourceTree = "<group>"; };
 		368F2C7227E8533B0042A93B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		368F2C7C27E86EE00042A93B /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		368F2C7F27EA16CD0042A93B /* FundSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundSettingsView.swift; sourceTree = "<group>"; };
@@ -78,25 +80,82 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		363249AC27F3248900D36D1E /* MyFunds */ = {
+		363249AC27F3248900D36D1E /* MyFundsViewModels */ = {
 			isa = PBXGroup;
 			children = (
 				363249AA27F3247F00D36D1E /* MyFundsViewModel.swift */,
+				36811AB627F988EF0024E528 /* FundsViewModels */,
+				36811AB727F989050024E528 /* DebtsViewModels */,
+			);
+			path = MyFundsViewModels;
+			sourceTree = "<group>";
+		};
+		36811AB227F978E60024E528 /* MainPageViews */ = {
+			isa = PBXGroup;
+			children = (
+				361FFC1227C281F50020F731 /* MainPageView.swift */,
+				36811AB327F988300024E528 /* MyFundsViews */,
+			);
+			path = MainPageViews;
+			sourceTree = "<group>";
+		};
+		36811AB327F988300024E528 /* MyFundsViews */ = {
+			isa = PBXGroup;
+			children = (
+				36811AB027F9786F0024E528 /* MyFundsView.swift */,
+				365C4D7627EF80CD008FEA61 /* FundsTabView.swift */,
+				36811AB427F988AD0024E528 /* FundsViews */,
+				36811AB527F988C00024E528 /* DebtsViews */,
+			);
+			path = MyFundsViews;
+			sourceTree = "<group>";
+		};
+		36811AB427F988AD0024E528 /* FundsViews */ = {
+			isa = PBXGroup;
+			children = (
+				365C4D7827EF8368008FEA61 /* FundsView.swift */,
+				36D8A3AB27E25C3100803AD5 /* ListRowFundsView.swift */,
+				368F2C7F27EA16CD0042A93B /* FundSettingsView.swift */,
+			);
+			path = FundsViews;
+			sourceTree = "<group>";
+		};
+		36811AB527F988C00024E528 /* DebtsViews */ = {
+			isa = PBXGroup;
+			children = (
+				365C4D7A27EF83F1008FEA61 /* DebtsView.swift */,
+				363249A027F31C2000D36D1E /* ListRowDebtsView.swift */,
+				363249A627F31DDB00D36D1E /* DebtSettingsView.swift */,
+			);
+			path = DebtsViews;
+			sourceTree = "<group>";
+		};
+		36811AB627F988EF0024E528 /* FundsViewModels */ = {
+			isa = PBXGroup;
+			children = (
 				36A2662A27EF0003006BC749 /* FundsViewModel.swift */,
 				365C4D7D27EF8854008FEA61 /* FundSettingsViewModel.swift */,
+			);
+			path = FundsViewModels;
+			sourceTree = "<group>";
+		};
+		36811AB727F989050024E528 /* DebtsViewModels */ = {
+			isa = PBXGroup;
+			children = (
 				363249A227F31CE000D36D1E /* DebtsViewModel.swift */,
 				363249A427F31D7500D36D1E /* DebtSettingsViewModel.swift */,
 			);
-			path = MyFunds;
+			path = DebtsViewModels;
 			sourceTree = "<group>";
 		};
-		365C4D7C27EF8580008FEA61 /* Components */ = {
+		36811AB827F9891B0024E528 /* MyFundsModels */ = {
 			isa = PBXGroup;
 			children = (
-				36D8A3AB27E25C3100803AD5 /* ListRowFundsView.swift */,
-				363249A027F31C2000D36D1E /* ListRowDebtsView.swift */,
+				363249A827F322BB00D36D1E /* MyFundsModel.swift */,
+				36E01E6127EE2AE20078A907 /* FundModel.swift */,
+				3632499E27F31BDF00D36D1E /* DebtModel.swift */,
 			);
-			path = Components;
+			path = MyFundsModels;
 			sourceTree = "<group>";
 		};
 		368F2C7E27E86F850042A93B /* Services */ = {
@@ -158,9 +217,7 @@
 		36D8A39927E1CAFB00803AD5 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				363249A827F322BB00D36D1E /* MyFundsModel.swift */,
-				36E01E6127EE2AE20078A907 /* FundModel.swift */,
-				3632499E27F31BDF00D36D1E /* DebtModel.swift */,
+				36811AB827F9891B0024E528 /* MyFundsModels */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -169,13 +226,7 @@
 			isa = PBXGroup;
 			children = (
 				36C20E5127BE3B5A00F7329A /* AuthView.swift */,
-				361FFC1227C281F50020F731 /* MainPageView.swift */,
-				365C4D7627EF80CD008FEA61 /* FundsTabView.swift */,
-				365C4D7827EF8368008FEA61 /* FundsView.swift */,
-				365C4D7A27EF83F1008FEA61 /* DebtsView.swift */,
-				368F2C7F27EA16CD0042A93B /* FundSettingsView.swift */,
-				363249A627F31DDB00D36D1E /* DebtSettingsView.swift */,
-				365C4D7C27EF8580008FEA61 /* Components */,
+				36811AB227F978E60024E528 /* MainPageViews */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -184,7 +235,7 @@
 			isa = PBXGroup;
 			children = (
 				3632499127F3047C00D36D1E /* MainPageViewModel.swift */,
-				363249AC27F3248900D36D1E /* MyFunds */,
+				363249AC27F3248900D36D1E /* MyFundsViewModels */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -287,6 +338,7 @@
 				36C20E5027BE3B5A00F7329A /* FinanceReportApp.swift in Sources */,
 				361FFC1327C281F50020F731 /* MainPageView.swift in Sources */,
 				3632499227F3047C00D36D1E /* MainPageViewModel.swift in Sources */,
+				36811AB127F9786F0024E528 /* MyFundsView.swift in Sources */,
 				36A2662B27EF0003006BC749 /* FundsViewModel.swift in Sources */,
 				368F2C7D27E86EE00042A93B /* AuthService.swift in Sources */,
 			);
@@ -427,6 +479,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -456,6 +509,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
