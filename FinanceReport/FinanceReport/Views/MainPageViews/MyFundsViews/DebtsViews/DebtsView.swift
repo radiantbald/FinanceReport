@@ -19,8 +19,24 @@ struct DebtsView: View {
         
         ZStack{
             VStack{
+                ZStack{
+                    HStack{
+                        Text("Мои долги: \(viewModel.sumDebts()) ₽")
+                            .padding(.horizontal)
+                        Spacer()
+                    }
+                    Button {
+                        viewModel.debtsArray.append(DebtModel())
+                        print("\(viewModel.debtsArray.count) долгов")
+                    } label: {
+                        HStack {
+                            Spacer()
+                            Text("+")
+                                .padding(.horizontal)
+                        }
+                    }
+                }
                 List{
-                    Text("\(viewModel.sumDebts())")
                     ForEach(viewModel.debtsArray, id: \.self) { debt in
                         ListRowDebtsView(debt: debt)
                             .swipeActions {
@@ -28,31 +44,20 @@ struct DebtsView: View {
                                     self.debtToDelete = debt
                                     isActionSheetShow.toggle()
                                 } label: {
-                                    Text("Удалить")
-                                        .background(Color.red)
-                                        .foregroundColor(.white)
+                                    HStack{
+                                        Spacer()
+                                        Text("Удалить")
+                                            .background(Color.red)
+                                            .foregroundColor(.white)
+                                    }
                                 }
                             }
                     }
                     .listRowSeparatorTint(.clear)
                     .listRowSeparator(.hidden)
-                    
-                    Button {
-                        viewModel.debtsArray.append(DebtModel())
-                        print("\(viewModel.debtsArray.count) долгов")
-                    } label: {
-                        HStack {
-                            Spacer()
-                            Text("Добавить долг")
-                                .frame(height: 60)
-                            
-                            
-                            Spacer()
-                        }
-                    }
-                    
                 }
                 .listStyle(PlainListStyle())
+                .mask(LinearGradient(gradient: Gradient(colors: [.black, .black, .black, .black, .black, .black, .black, .black, .black,  .clear]), startPoint: .top, endPoint: .bottom))
                 .confirmationDialog("Точно удалить?", isPresented: $isActionSheetShow, titleVisibility: .visible) {
                     Button{
                         viewModel.debtsArray.removeAll() { deletedDebt in

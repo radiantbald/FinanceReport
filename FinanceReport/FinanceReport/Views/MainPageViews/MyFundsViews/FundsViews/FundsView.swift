@@ -14,61 +14,78 @@ struct FundsView: View {
     @State private var isActionSheetShow = false
     
     @State var fundToDelete: FundModel?
-   
+    
     
     var body: some View {
         
         ZStack{
             VStack{
-                List{
-                    Text("\(viewModel.sumFunds())")
-                    ForEach(viewModel.fundsArray, id: \.self) { fund in
-                        ListRowFundsView(fund: fund)
-                            .swipeActions {
-                                Button {
-                                    self.fundToDelete = fund
-                                    isActionSheetShow.toggle()
-                                } label: {
-                                    Text("Удалить")
-                                        .background(Color.red)
-                                        .foregroundColor(.white)
-                                }
+                VStack{
+                    ZStack{
+                        HStack{
+                            Text("Мои накопления: \(viewModel.sumFunds()) ₽")
+                                .padding(.horizontal)
+                            Spacer()
+                        }
+                        Button {
+                            viewModel.fundsArray.append(FundModel())
+                            print("\(viewModel.fundsArray.count) накопительных счетов")
+                        } label: {
+                            HStack {
+                                Spacer()
+                                Text("+")
+                                    .padding(.horizontal)
                             }
+                        }
                     }
-                    .listRowSeparatorTint(.clear)
-                    .listRowSeparator(.hidden)
-                    
-                    Button {
-                        viewModel.fundsArray.append(FundModel())
-                        print("\(viewModel.fundsArray.count) накопительных счетов")
-                    } label: {
-                        HStack {
-                            Spacer()
-                            Text("Добавить новый счет")
-                                .frame(height: 60)
-                           
-                            
-                            Spacer()
+                    List{
+                        ForEach(viewModel.fundsArray, id: \.self) { fund in
+                            ListRowFundsView(fund: fund)
+                                .swipeActions {
+                                    Button {
+                                        self.fundToDelete = fund
+                                        isActionSheetShow.toggle()
+                                    } label: {
+                                        Text("Удалить")
+                                            .background(Color.red)
+                                            .foregroundColor(.white)
+                                    }
+                                }
+                        }
+                        .listRowSeparatorTint(.clear)
+                        .listRowSeparator(.hidden)
+                        
+                        
+                    }
+                    .listStyle(PlainListStyle())
+                    .mask(LinearGradient(gradient: Gradient(colors: [.black, .black, .black, .black, .black, .black, .black, .black, .black,  .clear]), startPoint: .top, endPoint: .bottom))
+                    .confirmationDialog("Точно удалить?", isPresented: $isActionSheetShow, titleVisibility: .visible) {
+                        Button{
+                            viewModel.fundsArray.removeAll() { deletedFund in
+                                deletedFund.id == fundToDelete!.id
+                            }
+                        } label: {
+                            Text("Да")
+                        }
+                        
+                        Button(role: .cancel) {
+                            //нет действия
+                        } label: {
+                            Text("Нет")
                         }
                     }
                     
                 }
-                .listStyle(PlainListStyle())
-                .confirmationDialog("Точно удалить?", isPresented: $isActionSheetShow, titleVisibility: .visible) {
-                    Button{
-                        viewModel.fundsArray.removeAll() { deletedFund in
-                            deletedFund.id == fundToDelete!.id
-                        }
-                    } label: {
-                        Text("Да")
-                    }
-                    
-                    Button(role: .cancel) {
-                        //нет действия
-                    } label: {
-                        Text("Нет")
-                    }
-                }
+                
+                //                Spacer()
+                //
+                //
+                //                LinearGradient(gradient: Gradient(colors: [.red, .init(white: 1, opacity: 0), .init(white: 1, opacity: 0)]), startPoint: .bottom, endPoint: .top)
+                //                    .ignoresSafeArea(.all)
+                //                    .frame(height: 50)
+                
+                
+                
             }
         }
         //.navigationBarHidden(/*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/)
