@@ -19,7 +19,6 @@ struct FundSettingsView: View {
                 .ignoresSafeArea()
             VStack{
                 HStack {
-                    
                     Text(date.formatToString(using: .ddMMyy))
                         .font(.system(size: 14))
                         .padding(.leading)
@@ -47,7 +46,6 @@ struct FundSettingsView: View {
                         .background(.white)
                         .cornerRadius(12)
                         .shadow(radius: 6)
-                    
                     
                     Spacer()
                 }

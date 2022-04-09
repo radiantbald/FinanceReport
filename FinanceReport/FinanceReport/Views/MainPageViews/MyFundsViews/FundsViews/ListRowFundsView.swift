@@ -20,9 +20,7 @@ struct ListRowFundsView: View {
         Button {
             isFundSettingsShow.toggle()
         } label: {
-            
             HStack{
-                
                 VStack(alignment: .leading, spacing: 5){
                     Text(fund.name)
                     HStack(spacing: 0) {
@@ -30,7 +28,9 @@ struct ListRowFundsView: View {
                         Text("₽")
                     }
                 }
+                
                 Spacer()
+                
                 Image(systemName: "gear")
             }
             .padding()

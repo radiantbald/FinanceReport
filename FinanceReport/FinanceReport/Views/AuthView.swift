@@ -16,7 +16,6 @@ extension View {
     }
 }
 
-
 struct AuthView: View {
     
     @State private var isKeyboardOpened = false
@@ -34,11 +33,8 @@ struct AuthView: View {
     var body: some View {
         
         NavigationView {
-            
             ZStack {
-                
                 ZStack{
-                    
                     VStack {
                         
                         VStack(alignment: .center) {
@@ -52,13 +48,11 @@ struct AuthView: View {
                                     .cornerRadius(12)
                                     .shadow(radius: 6)
                                 
-                                
                                 SecureField("Введите пароль", text: $password)
                                     .padding()
                                     .background(.white)
                                     .cornerRadius(12)
                                     .shadow(radius: 6)
-                                
                                 
                                 if !isAuth {
                                     SecureField("Повторите пароль", text: $confirmPassword)
@@ -66,25 +60,22 @@ struct AuthView: View {
                                         .background(.white)
                                         .cornerRadius(12)
                                         .shadow(radius: 6)
-                                    
                                 }
-                            } // Поля для ввода email и пароля
+                            }
                             
                             VStack {
                                 Button {
                                     if isAuth {
                                         print("Авторизация")
-                                
+                                        
                                         AuthService.shared.signIn(email: self.login,
                                                                   password: self.password) { result in
                                             switch result {
                                                 
                                             case .success(_):
-                                                
                                                 isMainPageShow.toggle()
                                                 
                                             case .failure(let error):
-                                                
                                                 alertMessage = "Ошибка Авторизации!: \(error.localizedDescription)"
                                                 isShowAlert.toggle()
                                             }
@@ -101,6 +92,7 @@ struct AuthView: View {
                                         AuthService.shared.signUp(email: self.login,
                                                                   password: self.password) { result in
                                             switch result {
+                                                
                                             case .success(let user):
                                                 alertMessage = "Вы успешно зарегистрировались с email: \(user.email!)"
                                                 self.isShowAlert.toggle()
@@ -135,7 +127,7 @@ struct AuthView: View {
                                         .cornerRadius(12)
                                         .foregroundColor(.black)
                                 }
-                            } // Кнопки "Войти / зарегистрироваться / уже есть аккаунт"
+                            }
                         }
                         .padding()
                         .background(Color("Ice7"))
@@ -148,15 +140,13 @@ struct AuthView: View {
                         
                         .alert(self.alertMessage, isPresented: $isShowAlert) {
                             Button {
-                                
+                                //
                             } label: {
                                 Text("OK")
                             }
-                            
                         }
                     }
                     .frame(width: screenSize.width , height: screenSize.height, alignment: .center)
-                    
                     .edgesIgnoringSafeArea(.all)
                     .onTapGesture {
                         self.dismissKeyboard()
@@ -167,15 +157,13 @@ struct AuthView: View {
                         self.isKeyboardOpened = false
                     }
                     .fullScreenCover(isPresented: $isMainPageShow) {
-
+                        
                         let mainPageViewModel = MainPageViewModel(user: AuthService.shared.currentUser!)
                         
                         MainPageView(viewModel: mainPageViewModel)
                     }
-                } // Окно "Авторизация/Регистрация"
-                
-            } //Весь экран
-            
+                }
+            }
             .navigationBarHidden(/*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/)
             .navigationBarBackButtonHidden(/*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/)
         }

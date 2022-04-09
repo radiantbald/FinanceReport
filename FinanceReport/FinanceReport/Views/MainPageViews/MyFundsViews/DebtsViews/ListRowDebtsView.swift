@@ -20,9 +20,7 @@ struct ListRowDebtsView: View {
         Button {
             isDebtSettingsShow.toggle()
         } label: {
-            
             HStack{
-                
                 VStack(alignment: .leading, spacing: 5){
                     Text(debt.name)
                     HStack(spacing: 0) {
@@ -30,7 +28,9 @@ struct ListRowDebtsView: View {
                         Text("₽")
                     }
                 }
+                
                 Spacer()
+                
                 Image(systemName: "gear")
             }
             .padding()

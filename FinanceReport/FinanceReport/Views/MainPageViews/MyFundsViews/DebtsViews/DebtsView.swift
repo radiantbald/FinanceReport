@@ -75,7 +75,6 @@ struct DebtsView: View {
                 }
             }
         }
-        //.navigationBarHidden(/*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/)
         .navigationBarBackButtonHidden(/*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/)
     }
 }

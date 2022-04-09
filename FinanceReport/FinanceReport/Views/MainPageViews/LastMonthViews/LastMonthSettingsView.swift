@@ -1,17 +1,17 @@
 //
-//  DebtSettingsView.swift
+//  LastMonthSettingsView.swift
 //  FinanceReport
 //
-//  Created by Олег Попов on 29.03.2022.
+//  Created by Олег Попов on 08.04.2022.
 //
 
 import SwiftUI
 
-struct DebtSettingsView: View {
+struct LastMonthSettingsView: View {
     
     @Environment(\.dismiss) var dismiss
     
-    @State var viewModel: DebtSettingsViewModel
+    @State var viewModel: LastMonthSettingsViewModel
     
     var body: some View {
         ZStack {
@@ -26,21 +26,17 @@ struct DebtSettingsView: View {
                     Spacer()
                     
                     Button {
-                        DebtsViewModel.shared.setDebt(debt: viewModel.debt)
+                        LastMonthViewModel.shared.setLastMonthMoney(score: viewModel.lastMonthMoney)
+                        print("\(viewModel.lastMonthMoney.score)")
                         self.dismiss()
                     } label: {
                         Text("Сохранить и выйти")
                             .padding(.trailing)
                     }
                 }
+                
                 VStack{
-                    TextField("Кому должен", text: $viewModel.debt.name)
-                        .padding()
-                        .background(.white)
-                        .cornerRadius(12)
-                        .shadow(radius: 6)
-                    
-                    TextField("Сколько должен", value: $viewModel.debt.score, formatter: NumberFormatter())
+                    TextField("Сколько осталось с прошлого месяца?", value: $viewModel.lastMonthMoney.score, formatter: NumberFormatter())
                         .keyboardType(.numberPad)
                         .padding()
                         .background(.white)
@@ -53,7 +49,6 @@ struct DebtSettingsView: View {
                 .padding(.horizontal)
                 .padding(.vertical, 10)
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
-                //.background(Color("Ice8"))
                 .shadow(radius: 2)
                 .foregroundColor(.black)
             }
@@ -64,8 +59,8 @@ struct DebtSettingsView: View {
     }
 }
 
-struct DebtSettingsView_Previews: PreviewProvider {
+struct LastMonthSettingsView_Previews: PreviewProvider {
     static var previews: some View {
-        DebtSettingsView(viewModel: DebtSettingsViewModel(debt: DebtModel()))
+        LastMonthSettingsView(viewModel: LastMonthSettingsViewModel(lastMonthMoney: LastMonthModel()))
     }
 }

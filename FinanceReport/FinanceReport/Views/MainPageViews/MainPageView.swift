@@ -14,14 +14,12 @@ struct MainPageView: View {
     var body: some View {
        
             ZStack {
-                
                 VStack {
-                    
                     UpperBar()
                     
                     ScrollView {
                         MyFundsView()
-                        LastMonth()
+                        LastMonthView()
                         PlanningTab()
                         FactTab()
                         
@@ -30,7 +28,6 @@ struct MainPageView: View {
             }
             .navigationBarHidden(/*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/)
             .navigationBarBackButtonHidden(/*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/)
-        
     }
 }
 
@@ -45,54 +42,10 @@ struct UpperBar: View { // Верхнее меню управления
                     .font(.system(size: 14))
                     .padding(.leading)
                 Spacer()
-                
             }
             HStack {
                // Здесь будет логотип
                 //  .padding(.top, 10)
-            }
-        }
-    }
-}
-
-struct LastMonth: View { // Перенос с прошлого месяца
-
-    @State var showSheet: Bool = false
-    
-    var body: some View {
-        ZStack{
-            VStack(spacing: 0) {
-                Button {
-                    showSheet.toggle()
-                } label: {
-                    VStack {
-                        HStack {
-                            VStack(alignment: .leading) {
-                                Text("Перенос с прошлого месяца")
-                                HStack(spacing: 0) {
-                                    Text("")
-                                    Text("₽")
-                                }
-                            }
-                            Spacer()
-                            Image(systemName: "questionmark")
-                                .padding(.trailing, 0)
-                        }
-                        .padding(.horizontal)
-                        .padding(.vertical, 10)
-                        .frame(maxWidth: .infinity)
-                        .background(Color("Ice8"))
-                        .shadow(radius: 2)
-                        .foregroundColor(.black)
-                    }
-                }
-                .frame(maxWidth: .infinity)
-                .background(.white)
-                .cornerRadius(12)
-                .foregroundColor(.black)
-                .padding(.horizontal)
-                .padding(.bottom, 10)
-                .shadow(radius: 6)
             }
         }
     }
@@ -126,9 +79,8 @@ struct PlanningTab: View{ // Предполагаемые доходы
                     .shadow(radius: 2)
                     .foregroundColor(.black)
                 }
-            } // Предполагаемые доходы
+            }
             
-            // Планируемые расходы
             Button {
                 print("Календарь расходов")
             } label: {
@@ -151,9 +103,7 @@ struct PlanningTab: View{ // Предполагаемые доходы
                     .shadow(radius: 2)
                     .foregroundColor(.black)
                 }
-            } // Планируемые расходы
-            
-            // Предполагаемый остаток
+            }
             
             VStack {
                 HStack {
@@ -172,9 +122,9 @@ struct PlanningTab: View{ // Предполагаемые доходы
                 .background(Color("Ice8"))
                 .shadow(radius: 2)
                 .foregroundColor(.black)
-            } // Предполагаемый остаток
+            }
             
-        } // VStack
+        }
         .frame(maxWidth: .infinity)
         .cornerRadius(12)
         .padding(.horizontal)
@@ -184,13 +134,13 @@ struct PlanningTab: View{ // Предполагаемые доходы
     }
 }
 
-struct FactTab: View { // Фактические доходы и расходы
+struct FactTab: View {
     
     var body: some View {
         
         VStack (spacing: 0) {
             
-            Button { // Фактические доходы
+            Button {
                 print("Календарь доходов")
             } label: {
                 VStack {
@@ -212,9 +162,8 @@ struct FactTab: View { // Фактические доходы и расходы
                     .shadow(radius: 2)
                     .foregroundColor(.black)
                 }
-            } // Фактические доходы
+            }
             
-            // Фактические расходы
             Button {
                 print("Календарь расходов")
             } label: {
@@ -237,9 +186,8 @@ struct FactTab: View { // Фактические доходы и расходы
                     .shadow(radius: 2)
                     .foregroundColor(.black)
                 }
-            } // Фактические расходы
+            }
             
-            // Средства на руках
             Button {
                 print("Средства на руках")
             } label: {
@@ -263,7 +211,7 @@ struct FactTab: View { // Фактические доходы и расходы
                     .shadow(radius: 2)
                     .foregroundColor(.black)
                 }
-            } // Средства на руках
+            }
         }
         .frame(maxWidth: .infinity)
         .cornerRadius(12)

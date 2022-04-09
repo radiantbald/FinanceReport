@@ -17,6 +17,7 @@ struct FundsTabView: View {
     
     @Environment(\.dismiss) var dismiss
     @ObservedObject var viewModel = MyFundsViewModel.shared
+    
     var body: some View {
         
         VStack {
@@ -40,14 +41,12 @@ struct FundsTabView: View {
             }
         }
         
-        
         TabView() {
             FundsView()
                 .tabItem{
                     VStack {
                         Image(systemName: "star.circle")
                         Text("Мои накопления")
-                        
                     }
                 }
             DebtsView()
@@ -57,11 +56,10 @@ struct FundsTabView: View {
                         Text("Мои долги")
                     }
                 }
-            
-            
         }
     }
 }
+
 struct FundsTabView_Previews: PreviewProvider {
     static var previews: some View {
         FundsTabView()

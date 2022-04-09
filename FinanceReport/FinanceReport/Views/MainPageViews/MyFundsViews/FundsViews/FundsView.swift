@@ -54,8 +54,6 @@ struct FundsView: View {
                         }
                         .listRowSeparatorTint(.clear)
                         .listRowSeparator(.hidden)
-                        
-                        
                     }
                     .listStyle(PlainListStyle())
                     .mask(LinearGradient(gradient: Gradient(colors: [.black, .black, .black, .black, .black, .black, .black, .black, .black,  .clear]), startPoint: .top, endPoint: .bottom))
@@ -74,26 +72,12 @@ struct FundsView: View {
                             Text("Нет")
                         }
                     }
-                    
                 }
-                
-                //                Spacer()
-                //
-                //
-                //                LinearGradient(gradient: Gradient(colors: [.red, .init(white: 1, opacity: 0), .init(white: 1, opacity: 0)]), startPoint: .bottom, endPoint: .top)
-                //                    .ignoresSafeArea(.all)
-                //                    .frame(height: 50)
-                
-                
-                
             }
         }
-        //.navigationBarHidden(/*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/)
         .navigationBarBackButtonHidden(/*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/)
     }
 }
-
-
 
 struct FundsView_Previews: PreviewProvider {
     static var previews: some View {
