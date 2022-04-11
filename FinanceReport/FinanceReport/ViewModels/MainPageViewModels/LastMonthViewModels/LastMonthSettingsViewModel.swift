@@ -9,8 +9,6 @@ import Foundation
 
 class LastMonthSettingsViewModel: ObservableObject {
     
-    static let shared = LastMonthViewModel()
-    
     @Published var lastMonthMoney: LastMonthModel
     
     init(lastMonthMoney: LastMonthModel) {
