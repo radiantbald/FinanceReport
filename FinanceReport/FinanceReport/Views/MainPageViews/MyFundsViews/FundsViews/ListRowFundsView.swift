@@ -10,7 +10,6 @@ import SwiftUI
 struct ListRowFundsView: View {
     
     @Environment(\.dismiss) var dismiss
-    
     @State private var isFundSettingsShow = false
     
     var fund: FundModel

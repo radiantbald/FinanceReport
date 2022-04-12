@@ -47,8 +47,8 @@ struct PlanningView: View{ // Предполагаемые доходы
                 }
             }
             
-            
             Button {
+                arePlanningExpensesShown.toggle()
                 print("Планируемые расходы")
             } label: {
                 VStack {
@@ -98,9 +98,12 @@ struct PlanningView: View{ // Предполагаемые доходы
         .padding(.bottom, 10)
         .foregroundColor(.black)
         .shadow(radius: 6)
-//        .fullScreenCover(isPresented: $arePlanningIncomesShown) {
-//            let planningIncomesViewModel = PlanningIncomesViewModel
-//        }
+        .fullScreenCover(isPresented: $arePlanningIncomesShown, content: {
+            PlanningIncomesView()
+        })
+        .fullScreenCover(isPresented: $arePlanningExpensesShown) {
+            PlanningExpensesView()
+        }
     }
 }
 struct PlanningView_Previews: PreviewProvider {

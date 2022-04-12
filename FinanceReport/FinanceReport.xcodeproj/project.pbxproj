@@ -37,6 +37,11 @@
 		36C20E5227BE3B5A00F7329A /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C20E5127BE3B5A00F7329A /* AuthView.swift */; };
 		36C20E5427BE3B5A00F7329A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36C20E5327BE3B5A00F7329A /* Assets.xcassets */; };
 		36C20E5727BE3B5A00F7329A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36C20E5627BE3B5A00F7329A /* Preview Assets.xcassets */; };
+		36CEC6DA2805A3C000D27417 /* ListRowPlanningIncomesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CEC6D92805A3C000D27417 /* ListRowPlanningIncomesView.swift */; };
+		36CEC6DC2805A3D600D27417 /* ListRowPlanningExpensesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CEC6DB2805A3D600D27417 /* ListRowPlanningExpensesView.swift */; };
+		36CEC6DE2805A40700D27417 /* PlanningIncomesSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CEC6DD2805A40700D27417 /* PlanningIncomesSettingsView.swift */; };
+		36CEC6E02805A42100D27417 /* PlanningExpensesSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CEC6DF2805A42100D27417 /* PlanningExpensesSettingsView.swift */; };
+		36CEC6E42805A7D700D27417 /* PlanningIncomesSettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CEC6E32805A7D700D27417 /* PlanningIncomesSettingsViewModel.swift */; };
 		36D3382D28043E8D00DA2810 /* PlanningIncomesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D3382C28043E8D00DA2810 /* PlanningIncomesModel.swift */; };
 		36D3382F28043ED600DA2810 /* PlanningExpensesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D3382E28043ED600DA2810 /* PlanningExpensesModel.swift */; };
 		36D3383128043F4C00DA2810 /* PlanningModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D3383028043F4C00DA2810 /* PlanningModel.swift */; };
@@ -80,6 +85,11 @@
 		36C20E5127BE3B5A00F7329A /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
 		36C20E5327BE3B5A00F7329A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		36C20E5627BE3B5A00F7329A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		36CEC6D92805A3C000D27417 /* ListRowPlanningIncomesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRowPlanningIncomesView.swift; sourceTree = "<group>"; };
+		36CEC6DB2805A3D600D27417 /* ListRowPlanningExpensesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRowPlanningExpensesView.swift; sourceTree = "<group>"; };
+		36CEC6DD2805A40700D27417 /* PlanningIncomesSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanningIncomesSettingsView.swift; sourceTree = "<group>"; };
+		36CEC6DF2805A42100D27417 /* PlanningExpensesSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanningExpensesSettingsView.swift; sourceTree = "<group>"; };
+		36CEC6E32805A7D700D27417 /* PlanningIncomesSettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanningIncomesSettingsViewModel.swift; sourceTree = "<group>"; };
 		36D3382C28043E8D00DA2810 /* PlanningIncomesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanningIncomesModel.swift; sourceTree = "<group>"; };
 		36D3382E28043ED600DA2810 /* PlanningExpensesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanningExpensesModel.swift; sourceTree = "<group>"; };
 		36D3383028043F4C00DA2810 /* PlanningModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanningModel.swift; sourceTree = "<group>"; };
@@ -281,6 +291,43 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		36CEC6D72805A2D700D27417 /* PlanningIncomesViews */ = {
+			isa = PBXGroup;
+			children = (
+				36D9BA7728033C02001458E4 /* PlanningIncomesView.swift */,
+				36CEC6D92805A3C000D27417 /* ListRowPlanningIncomesView.swift */,
+				36CEC6DD2805A40700D27417 /* PlanningIncomesSettingsView.swift */,
+			);
+			path = PlanningIncomesViews;
+			sourceTree = "<group>";
+		};
+		36CEC6D82805A2E700D27417 /* PlanningExpenses */ = {
+			isa = PBXGroup;
+			children = (
+				36D9BA7928033C17001458E4 /* PlanningExpensesView.swift */,
+				36CEC6DB2805A3D600D27417 /* ListRowPlanningExpensesView.swift */,
+				36CEC6DF2805A42100D27417 /* PlanningExpensesSettingsView.swift */,
+			);
+			path = PlanningExpenses;
+			sourceTree = "<group>";
+		};
+		36CEC6E12805A7A500D27417 /* PlanningIncomesViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				36D9BA7B28033D0A001458E4 /* PlanningIncomesViewModel.swift */,
+				36CEC6E32805A7D700D27417 /* PlanningIncomesSettingsViewModel.swift */,
+			);
+			path = PlanningIncomesViewModels;
+			sourceTree = "<group>";
+		};
+		36CEC6E22805A7B900D27417 /* PlanningExpensesViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				36D9BA7D28033D1F001458E4 /* PlanningExpensesViewModel.swift */,
+			);
+			path = PlanningExpensesViewModel;
+			sourceTree = "<group>";
+		};
 		36D3382B28043E4F00DA2810 /* PlanningModels */ = {
 			isa = PBXGroup;
 			children = (
@@ -323,8 +370,8 @@
 			isa = PBXGroup;
 			children = (
 				36D9BA6C2803396A001458E4 /* PlanningView.swift */,
-				36D9BA7728033C02001458E4 /* PlanningIncomesView.swift */,
-				36D9BA7928033C17001458E4 /* PlanningExpensesView.swift */,
+				36CEC6D72805A2D700D27417 /* PlanningIncomesViews */,
+				36CEC6D82805A2E700D27417 /* PlanningExpenses */,
 			);
 			path = PlanningViews;
 			sourceTree = "<group>";
@@ -333,8 +380,8 @@
 			isa = PBXGroup;
 			children = (
 				36D9BA7528033BC9001458E4 /* PlanningViewModel.swift */,
-				36D9BA7B28033D0A001458E4 /* PlanningIncomesViewModel.swift */,
-				36D9BA7D28033D1F001458E4 /* PlanningExpensesViewModel.swift */,
+				36CEC6E12805A7A500D27417 /* PlanningIncomesViewModels */,
+				36CEC6E22805A7B900D27417 /* PlanningExpensesViewModel */,
 			);
 			path = PlanningViewModels;
 			sourceTree = "<group>";
@@ -425,6 +472,7 @@
 				36E01E6227EE2AE20078A907 /* FundModel.swift in Sources */,
 				36D9BA7828033C02001458E4 /* PlanningIncomesView.swift in Sources */,
 				361C727028009BAA0003C09E /* LastMonthView.swift in Sources */,
+				36CEC6DC2805A3D600D27417 /* ListRowPlanningExpensesView.swift in Sources */,
 				36D9BA7A28033C17001458E4 /* PlanningExpensesView.swift in Sources */,
 				368F2C8027EA16CD0042A93B /* FundSettingsView.swift in Sources */,
 				361C726E28009B6C0003C09E /* LastMonthModel.swift in Sources */,
@@ -440,12 +488,15 @@
 				365C4D7727EF80CD008FEA61 /* FundsTabView.swift in Sources */,
 				36D9BA7E28033D1F001458E4 /* PlanningExpensesViewModel.swift in Sources */,
 				36D8A3AC27E25C3100803AD5 /* ListRowFundsView.swift in Sources */,
+				36CEC6DA2805A3C000D27417 /* ListRowPlanningIncomesView.swift in Sources */,
 				3632499F27F31BDF00D36D1E /* DebtModel.swift in Sources */,
 				36D3382D28043E8D00DA2810 /* PlanningIncomesModel.swift in Sources */,
+				36CEC6DE2805A40700D27417 /* PlanningIncomesSettingsView.swift in Sources */,
 				365C4D7927EF8368008FEA61 /* FundsView.swift in Sources */,
 				36C20E5227BE3B5A00F7329A /* AuthView.swift in Sources */,
 				36D9BA7628033BC9001458E4 /* PlanningViewModel.swift in Sources */,
 				36D9BA6D2803396A001458E4 /* PlanningView.swift in Sources */,
+				36CEC6E42805A7D700D27417 /* PlanningIncomesSettingsViewModel.swift in Sources */,
 				365C4D7B27EF83F1008FEA61 /* DebtsView.swift in Sources */,
 				36C20E5027BE3B5A00F7329A /* FinanceReportApp.swift in Sources */,
 				361FFC1327C281F50020F731 /* MainPageView.swift in Sources */,
@@ -454,6 +505,7 @@
 				36A2662B27EF0003006BC749 /* FundsViewModel.swift in Sources */,
 				368F2C7D27E86EE00042A93B /* AuthService.swift in Sources */,
 				361C727528009D4A0003C09E /* LastMonthViewModel.swift in Sources */,
+				36CEC6E02805A42100D27417 /* PlanningExpensesSettingsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
