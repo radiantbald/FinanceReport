@@ -12,7 +12,7 @@ struct PlanningView: View{ // Предполагаемые доходы
     @Environment(\.dismiss) var dismiss
     
     @ObservedObject var viewModel = PlanningViewModel.shared
-    
+    @ObservedObject var planningIncomesViewModel = PlanningIncomesViewModel.shared
     @State private var arePlanningIncomesShown = false
     @State private var arePlanningExpensesShown = false
     
@@ -31,7 +31,7 @@ struct PlanningView: View{ // Предполагаемые доходы
                         VStack(alignment: .leading) {
                             Text("Предполагаемые доходы")
                             HStack(spacing: 0) {
-                                Text("\(viewModel.planningIncomes.sumPlanningIncomes())")
+                                Text("\(planningIncomesViewModel.sumPlanningIncomes())")
                                 Text("₽")
                             }
                         }

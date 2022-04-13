@@ -13,6 +13,7 @@ struct ListRowPlanningIncomesView: View {
     @State private var arePlanningIncomesSettingsShown = false
     
     var planningIncome: PlanningIncomesModel
+   // var planningRemainder: PlanningModel
     
     var body: some View {
         Button {
@@ -38,6 +39,7 @@ struct ListRowPlanningIncomesView: View {
             .fullScreenCover(isPresented: $arePlanningIncomesSettingsShown, content: {
                 let planningIncomesSettingsViewModel = PlanningIncomesSettingsViewModel(planningIncome: planningIncome)
                 PlanningIncomesSettingsView(viewModel: planningIncomesSettingsViewModel)
+//                let planningRemainderViewModel = planningRemainderViewModel(planningRemainder: planningRemainder)
             })
         }
     }

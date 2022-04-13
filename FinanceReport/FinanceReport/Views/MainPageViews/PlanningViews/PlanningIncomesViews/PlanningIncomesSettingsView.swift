@@ -11,6 +11,7 @@ struct PlanningIncomesSettingsView: View {
     
     @Environment(\.dismiss) var dismiss
     @State var viewModel: PlanningIncomesSettingsViewModel
+   // @State var remainderViewModel: PlanningViewModel
 
     var body: some View {
         ZStack {
@@ -26,6 +27,7 @@ struct PlanningIncomesSettingsView: View {
                     
                     Button {
                         PlanningIncomesViewModel.shared.setPlanningIncome(income: viewModel.planningIncome)
+//                        PlanningViewModel.shared.setRemainderSum(score: remainderViewModel.planningRemainder)
                         self.dismiss()
                     } label: {
                         Text("Сохранить и выйти")

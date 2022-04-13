@@ -10,6 +10,7 @@ import SwiftUI
 struct PlanningIncomesView: View {
     
     @Environment(\.dismiss) var dismiss
+    
     @ObservedObject var viewModel = PlanningIncomesViewModel.shared
     @ObservedObject var remainderViewModel = PlanningViewModel.shared
     @State private var isActionSheetShow = false
@@ -31,8 +32,9 @@ struct PlanningIncomesView: View {
                                     Spacer()
                                     
                                     Button {
-                                        print("Предполагаемые доходы: \(viewModel.sumPlanningIncomes())")
-                                        PlanningViewModel.shared.setRemainderSum(score: remainderViewModel.planningRemainder)
+                                        PlanningViewModel.shared.setPlanningIncomesTotal(score: viewModel.planningIncomesTotal)
+                                        PlanningViewModel.shared.setPlanningRemainderSum(score: remainderViewModel.planningRemainder.score)
+                                        print("Предполагаемые доходы: \(viewModel.sumPlanningIncomes()), \n Предполагаемый остаток \(remainderViewModel.planningRemainder.score)")
                                         self.dismiss()
                                     } label: {
                                         Text("На главную")

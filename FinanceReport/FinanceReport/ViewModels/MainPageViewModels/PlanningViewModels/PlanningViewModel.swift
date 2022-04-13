@@ -11,6 +11,8 @@ class PlanningViewModel: ObservableObject {
     
     static let shared = PlanningViewModel()
     
+    @Published var planningIncomesTotal: PlanningIncomesModel = PlanningIncomesModel()
+    @Published var planningExpensesTotal: PlanningExpensesModel = PlanningExpensesModel()
     @Published var planningRemainder: PlanningModel = PlanningModel()
     
     var lastMonthMoney = LastMonthViewModel.shared
@@ -21,8 +23,13 @@ class PlanningViewModel: ObservableObject {
         planningRemainder.score = lastMonthMoney.lastMonthMoney.score + planningIncomes.sumPlanningIncomes() - planningExpenses.sumPlanningExpenses()
         return planningRemainder.score
     }
-    
-    func setRemainderSum(score: PlanningModel) {
+    func setPlanningIncomesTotal(score: PlanningIncomesModel) {
+        planningIncomesTotal.score = score.score
+    }
+    func setPlanningExpensesTotal(score: PlanningExpensesModel) {
+        planningExpensesTotal.score = score.score
+    }
+    func setPlanningRemainderSum(score: PlanningModel) {
         planningRemainder.score = score.score
     }
 }

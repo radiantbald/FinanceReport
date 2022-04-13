@@ -10,6 +10,7 @@ import Foundation
 class PlanningIncomesViewModel: ObservableObject {
 
     @Published var planningIncomesArray: [PlanningIncomesModel] = []
+    @Published var planningIncomesTotal: PlanningIncomesModel = PlanningIncomesModel()
     
     static let shared = PlanningIncomesViewModel()
     private init() {}
@@ -45,4 +46,6 @@ class PlanningIncomesViewModel: ObservableObject {
         return planningIncomesSum
         }
     }
+    
+    
 }
