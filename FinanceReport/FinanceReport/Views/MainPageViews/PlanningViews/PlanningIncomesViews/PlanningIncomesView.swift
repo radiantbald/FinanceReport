@@ -32,9 +32,9 @@ struct PlanningIncomesView: View {
                                     Spacer()
                                     
                                     Button {
-                                        PlanningViewModel.shared.setPlanningIncomesTotal(score: viewModel.planningIncomesTotal)
-                                        PlanningViewModel.shared.setPlanningRemainderSum(score: remainderViewModel.planningRemainder.score)
-                                        print("Предполагаемые доходы: \(viewModel.sumPlanningIncomes()), \n Предполагаемый остаток \(remainderViewModel.planningRemainder.score)")
+                                        PlanningViewModel.shared.setPlanningIncomesTotal(score: remainderViewModel.planningIncomesTotal)
+                                        PlanningViewModel.shared.setPlanningRemainderSum(score: remainderViewModel.planningRemainderTotal)
+                                        print("Предполагаемые доходы: \(viewModel.sumPlanningIncomes()),  Предполагаемый остаток \(remainderViewModel.planningRemainderTotal.score)")
                                         self.dismiss()
                                     } label: {
                                         Text("На главную")

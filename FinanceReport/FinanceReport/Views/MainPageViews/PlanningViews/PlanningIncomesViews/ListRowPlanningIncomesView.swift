@@ -13,7 +13,6 @@ struct ListRowPlanningIncomesView: View {
     @State private var arePlanningIncomesSettingsShown = false
     
     var planningIncome: PlanningIncomesModel
-   // var planningRemainder: PlanningModel
     
     var body: some View {
         Button {
@@ -38,8 +37,8 @@ struct ListRowPlanningIncomesView: View {
             .shadow(radius: 6)
             .fullScreenCover(isPresented: $arePlanningIncomesSettingsShown, content: {
                 let planningIncomesSettingsViewModel = PlanningIncomesSettingsViewModel(planningIncome: planningIncome)
-                PlanningIncomesSettingsView(viewModel: planningIncomesSettingsViewModel)
-//                let planningRemainderViewModel = planningRemainderViewModel(planningRemainder: planningRemainder)
+
+                PlanningIncomesSettingsView(viewModel: planningIncomesSettingsViewModel, remainderViewModel: PlanningViewModel())
             })
         }
     }
@@ -48,5 +47,6 @@ struct ListRowPlanningIncomesView: View {
 struct ListRowPlanningIncomesView_Previews: PreviewProvider {
     static var previews: some View {
         ListRowPlanningIncomesView(planningIncome: PlanningIncomesModel())
+        
     }
 }

@@ -44,7 +44,7 @@
 		36CEC6E42805A7D700D27417 /* PlanningIncomesSettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CEC6E32805A7D700D27417 /* PlanningIncomesSettingsViewModel.swift */; };
 		36D3382D28043E8D00DA2810 /* PlanningIncomesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D3382C28043E8D00DA2810 /* PlanningIncomesModel.swift */; };
 		36D3382F28043ED600DA2810 /* PlanningExpensesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D3382E28043ED600DA2810 /* PlanningExpensesModel.swift */; };
-		36D3383128043F4C00DA2810 /* PlanningModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D3383028043F4C00DA2810 /* PlanningModel.swift */; };
+		36D3383128043F4C00DA2810 /* PlanningRemainderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D3383028043F4C00DA2810 /* PlanningRemainderModel.swift */; };
 		36D8A39C27E1CD2100803AD5 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D8A39B27E1CD2100803AD5 /* DateFormatter.swift */; };
 		36D8A3AC27E25C3100803AD5 /* ListRowFundsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D8A3AB27E25C3100803AD5 /* ListRowFundsView.swift */; };
 		36D9BA6D2803396A001458E4 /* PlanningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D9BA6C2803396A001458E4 /* PlanningView.swift */; };
@@ -92,7 +92,7 @@
 		36CEC6E32805A7D700D27417 /* PlanningIncomesSettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanningIncomesSettingsViewModel.swift; sourceTree = "<group>"; };
 		36D3382C28043E8D00DA2810 /* PlanningIncomesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanningIncomesModel.swift; sourceTree = "<group>"; };
 		36D3382E28043ED600DA2810 /* PlanningExpensesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanningExpensesModel.swift; sourceTree = "<group>"; };
-		36D3383028043F4C00DA2810 /* PlanningModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanningModel.swift; sourceTree = "<group>"; };
+		36D3383028043F4C00DA2810 /* PlanningRemainderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanningRemainderModel.swift; sourceTree = "<group>"; };
 		36D8A39B27E1CD2100803AD5 /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
 		36D8A3AB27E25C3100803AD5 /* ListRowFundsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRowFundsView.swift; sourceTree = "<group>"; };
 		36D9BA6C2803396A001458E4 /* PlanningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanningView.swift; sourceTree = "<group>"; };
@@ -331,9 +331,9 @@
 		36D3382B28043E4F00DA2810 /* PlanningModels */ = {
 			isa = PBXGroup;
 			children = (
-				36D3383028043F4C00DA2810 /* PlanningModel.swift */,
 				36D3382C28043E8D00DA2810 /* PlanningIncomesModel.swift */,
 				36D3382E28043ED600DA2810 /* PlanningExpensesModel.swift */,
+				36D3383028043F4C00DA2810 /* PlanningRemainderModel.swift */,
 			);
 			name = PlanningModels;
 			path = LastMonthModels;
@@ -480,7 +480,7 @@
 				36D9BA7C28033D0A001458E4 /* PlanningIncomesViewModel.swift in Sources */,
 				363249A127F31C2000D36D1E /* ListRowDebtsView.swift in Sources */,
 				363249AB27F3247F00D36D1E /* MyFundsViewModel.swift in Sources */,
-				36D3383128043F4C00DA2810 /* PlanningModel.swift in Sources */,
+				36D3383128043F4C00DA2810 /* PlanningRemainderModel.swift in Sources */,
 				361C727328009CF50003C09E /* LastMonthSettingsView.swift in Sources */,
 				365C4D7E27EF8854008FEA61 /* FundSettingsViewModel.swift in Sources */,
 				36D8A39C27E1CD2100803AD5 /* DateFormatter.swift in Sources */,
