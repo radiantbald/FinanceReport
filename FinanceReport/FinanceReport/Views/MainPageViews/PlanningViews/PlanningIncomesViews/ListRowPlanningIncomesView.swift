@@ -37,8 +37,9 @@ struct ListRowPlanningIncomesView: View {
             .shadow(radius: 6)
             .fullScreenCover(isPresented: $arePlanningIncomesSettingsShown, content: {
                 let planningIncomesSettingsViewModel = PlanningIncomesSettingsViewModel(planningIncome: planningIncome)
+                PlanningIncomesSettingsView(viewModel: planningIncomesSettingsViewModel)
 
-                PlanningIncomesSettingsView(viewModel: planningIncomesSettingsViewModel, remainderViewModel: PlanningViewModel())
+//                PlanningIncomesSettingsView(viewModel: planningIncomesSettingsViewModel, remainderViewModel: PlanningViewModel())
             })
         }
     }

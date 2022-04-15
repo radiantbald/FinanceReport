@@ -20,7 +20,7 @@ class PlanningViewModel: ObservableObject {
     var planningExpenses = PlanningExpensesViewModel.shared
     
     func planningRemainderSum() -> Int {
-        planningRemainderTotal.score = planningIncomes.sumPlanningIncomes()
+        planningRemainderTotal.score = lastMonthMoney.lastMonthMoney.score + planningIncomes.sumPlanningIncomes()
         return planningRemainderTotal.score
     }
     func setPlanningIncomesTotal(score: PlanningRemainderModel) {

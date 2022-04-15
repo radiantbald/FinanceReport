@@ -12,6 +12,7 @@ struct LastMonthSettingsView: View {
     @Environment(\.dismiss) var dismiss
     
     @State var viewModel: LastMonthSettingsViewModel
+    @ObservedObject var remainderViewModel = PlanningViewModel.shared
     
     var body: some View {
         ZStack {
@@ -27,7 +28,8 @@ struct LastMonthSettingsView: View {
                     
                     Button {
                         LastMonthViewModel.shared.setLastMonthMoney(score: viewModel.lastMonthMoney)
-                        print("\(viewModel.lastMonthMoney.score)")
+                        PlanningViewModel.shared.setPlanningRemainderSum(score: remainderViewModel.planningRemainderTotal)
+                        print("С прошлого месяца осталось: \(viewModel.lastMonthMoney.score) ₽,  Предполагаемый остаток \(remainderViewModel.planningRemainderSum()) ₽")
                         self.dismiss()
                     } label: {
                         Text("Сохранить и выйти")

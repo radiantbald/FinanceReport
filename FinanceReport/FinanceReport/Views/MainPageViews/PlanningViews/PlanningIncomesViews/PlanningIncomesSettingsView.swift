@@ -11,7 +11,7 @@ struct PlanningIncomesSettingsView: View {
     
     @Environment(\.dismiss) var dismiss
     @State var viewModel: PlanningIncomesSettingsViewModel
-    @State var remainderViewModel: PlanningViewModel
+  //  @State var remainderViewModel: PlanningViewModel
 
     var body: some View {
         ZStack {
@@ -26,8 +26,8 @@ struct PlanningIncomesSettingsView: View {
                     Spacer()
                     
                     Button {
-                        PlanningIncomesViewModel.shared.setPlanningIncome(income: viewModel.planningIncome)
-                        PlanningViewModel.shared.setPlanningRemainderSum(score: remainderViewModel.planningRemainderTotal)
+                        PlanningIncomesViewModel.shared.setPlanningIncome(planningIncome: viewModel.planningIncome)
+//                        PlanningViewModel.shared.setPlanningRemainderSum(score: remainderViewModel.planningRemainderTotal)
                         self.dismiss()
                     } label: {
                         Text("Сохранить и выйти")
@@ -64,8 +64,8 @@ struct PlanningIncomesSettingsView: View {
 }
 }
 
-struct PlanningIncomesSettingsView_Previews: PreviewProvider {
-    static var previews: some View {
-        PlanningIncomesSettingsView(viewModel: PlanningIncomesSettingsViewModel(planningIncome: PlanningIncomesModel()), remainderViewModel: PlanningViewModel())
-    }
-}
+//struct PlanningIncomesSettingsView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        PlanningIncomesSettingsView(viewModel: PlanningIncomesSettingsViewModel(planningIncome: PlanningIncomesModel()), remainderViewModel: PlanningViewModel())
+//    }
+//}

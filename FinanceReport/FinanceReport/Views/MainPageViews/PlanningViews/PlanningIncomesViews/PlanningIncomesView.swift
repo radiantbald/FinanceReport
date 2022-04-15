@@ -34,7 +34,7 @@ struct PlanningIncomesView: View {
                                     Button {
                                         PlanningViewModel.shared.setPlanningIncomesTotal(score: remainderViewModel.planningIncomesTotal)
                                         PlanningViewModel.shared.setPlanningRemainderSum(score: remainderViewModel.planningRemainderTotal)
-                                        print("Предполагаемые доходы: \(viewModel.sumPlanningIncomes()),  Предполагаемый остаток \(remainderViewModel.planningRemainderTotal.score)")
+                                        print("Предполагаемые доходы: \(viewModel.sumPlanningIncomes()) ₽,  Предполагаемый остаток \(remainderViewModel.planningRemainderSum()) ₽")
                                         self.dismiss()
                                     } label: {
                                         Text("На главную")

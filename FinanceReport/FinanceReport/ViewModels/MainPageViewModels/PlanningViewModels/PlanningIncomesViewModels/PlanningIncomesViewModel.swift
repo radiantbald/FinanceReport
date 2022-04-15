@@ -10,7 +10,6 @@ import Foundation
 class PlanningIncomesViewModel: ObservableObject {
 
     @Published var planningIncomesArray: [PlanningIncomesModel] = []
-    @Published var planningIncomesTotal: PlanningIncomesModel = PlanningIncomesModel()
     
     static let shared = PlanningIncomesViewModel()
     private init() {}
@@ -25,13 +24,13 @@ class PlanningIncomesViewModel: ObservableObject {
         return nil
     }
     
-    func setPlanningIncome(income: PlanningIncomesModel) {
+    func setPlanningIncome(planningIncome: PlanningIncomesModel) {
         
         for (index, selfIncome) in planningIncomesArray.enumerated() {
-            if income.id == selfIncome.id {
-                planningIncomesArray[index].id = income.id
-                planningIncomesArray[index].name = income.id
-                planningIncomesArray[index].score = income.score
+            if planningIncome.id == selfIncome.id {
+                planningIncomesArray[index].id = planningIncome.id
+                planningIncomesArray[index].name = planningIncome.name
+                planningIncomesArray[index].score = planningIncome.score
             }
         }
     }

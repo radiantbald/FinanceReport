@@ -77,7 +77,7 @@ struct PlanningView: View{ // Предполагаемые доходы
                     VStack(alignment: .leading) {
                         Text("Предполагаемый остаток")
                         HStack(spacing: 0) {
-                            //Text("\(viewModel.planningRemainderSum())")
+                            Text("\(viewModel.planningRemainderTotal.score)")
                             Text("₽")
                         }
                     }

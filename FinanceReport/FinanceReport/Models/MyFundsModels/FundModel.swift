@@ -12,4 +12,3 @@ struct FundModel: Hashable {
     var name: String = "Новый счет"
     var score: Int = 0
 }
-
