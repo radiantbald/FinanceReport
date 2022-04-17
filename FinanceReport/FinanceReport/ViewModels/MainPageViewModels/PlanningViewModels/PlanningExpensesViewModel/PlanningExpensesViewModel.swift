@@ -24,13 +24,13 @@ class PlanningExpensesViewModel: ObservableObject {
         return nil
     }
     
-    func setPlanningExpenses(expense: PlanningExpensesModel) {
+    func setPlanningExpenses(planningExpense: PlanningExpensesModel) {
         
         for(index, selfExpense) in planningExpensesArray.enumerated() {
-            if expense.id == selfExpense.id {
-                planningExpensesArray[index].id = expense.id
-                planningExpensesArray[index].name = expense.name
-                planningExpensesArray[index].score = expense.score                
+            if planningExpense.id == selfExpense.id {
+                planningExpensesArray[index].id = planningExpense.id
+                planningExpensesArray[index].name = planningExpense.name
+                planningExpensesArray[index].score = planningExpense.score
             }
         }
     }

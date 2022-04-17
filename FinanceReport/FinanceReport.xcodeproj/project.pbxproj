@@ -24,6 +24,7 @@
 		363249A727F31DDB00D36D1E /* DebtSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363249A627F31DDB00D36D1E /* DebtSettingsView.swift */; };
 		363249A927F322BB00D36D1E /* MyFundsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363249A827F322BB00D36D1E /* MyFundsModel.swift */; };
 		363249AB27F3247F00D36D1E /* MyFundsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363249AA27F3247F00D36D1E /* MyFundsViewModel.swift */; };
+		365A6CD5280C63A300F81AA1 /* PlanningExpenseSettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365A6CD4280C63A300F81AA1 /* PlanningExpenseSettingsViewModel.swift */; };
 		365C4D7727EF80CD008FEA61 /* FundsTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365C4D7627EF80CD008FEA61 /* FundsTabView.swift */; };
 		365C4D7927EF8368008FEA61 /* FundsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365C4D7827EF8368008FEA61 /* FundsView.swift */; };
 		365C4D7B27EF83F1008FEA61 /* DebtsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365C4D7A27EF83F1008FEA61 /* DebtsView.swift */; };
@@ -71,6 +72,7 @@
 		363249A627F31DDB00D36D1E /* DebtSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebtSettingsView.swift; sourceTree = "<group>"; };
 		363249A827F322BB00D36D1E /* MyFundsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFundsModel.swift; sourceTree = "<group>"; };
 		363249AA27F3247F00D36D1E /* MyFundsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFundsViewModel.swift; sourceTree = "<group>"; };
+		365A6CD4280C63A300F81AA1 /* PlanningExpenseSettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanningExpenseSettingsViewModel.swift; sourceTree = "<group>"; };
 		365C4D7627EF80CD008FEA61 /* FundsTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundsTabView.swift; sourceTree = "<group>"; };
 		365C4D7827EF8368008FEA61 /* FundsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundsView.swift; sourceTree = "<group>"; };
 		365C4D7A27EF83F1008FEA61 /* DebtsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebtsView.swift; sourceTree = "<group>"; };
@@ -324,6 +326,7 @@
 			isa = PBXGroup;
 			children = (
 				36D9BA7D28033D1F001458E4 /* PlanningExpensesViewModel.swift */,
+				365A6CD4280C63A300F81AA1 /* PlanningExpenseSettingsViewModel.swift */,
 			);
 			path = PlanningExpensesViewModel;
 			sourceTree = "<group>";
@@ -482,6 +485,7 @@
 				363249AB27F3247F00D36D1E /* MyFundsViewModel.swift in Sources */,
 				36D3383128043F4C00DA2810 /* PlanningRemainderModel.swift in Sources */,
 				361C727328009CF50003C09E /* LastMonthSettingsView.swift in Sources */,
+				365A6CD5280C63A300F81AA1 /* PlanningExpenseSettingsViewModel.swift in Sources */,
 				365C4D7E27EF8854008FEA61 /* FundSettingsViewModel.swift in Sources */,
 				36D8A39C27E1CD2100803AD5 /* DateFormatter.swift in Sources */,
 				363249A527F31D7500D36D1E /* DebtSettingsViewModel.swift in Sources */,

@@ -35,13 +35,13 @@ struct PlanningIncomesSettingsView: View {
                     }
                 }
                 VStack{
-                    TextField("Название статьи расхода", text: $viewModel.planningIncome.name)
+                    TextField("Название статьи дохода", text: $viewModel.planningIncome.name)
                         .padding()
                         .background(.white)
                         .cornerRadius(12)
                         .shadow(radius: 6)
                     
-                    TextField("Средств на счете", value: $viewModel.planningIncome.score, formatter: NumberFormatter())
+                    TextField("Количество средств", value: $viewModel.planningIncome.score, formatter: NumberFormatter())
                         .keyboardType(.numberPad)
                         .padding()
                         .background(.white)
