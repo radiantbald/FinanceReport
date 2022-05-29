@@ -2,23 +2,14 @@
 //  DateModel.swift
 //  FinanceReport
 //
-//  Created by Олег Попов on 16.03.2022.
+//  Created by Олег Попов on 03.05.2022.
 //
 
 import Foundation
 
-extension DateFormatter {
-    static let ddMMyy: DateFormatter = {
-        let formatter = DateFormatter()
-        formatter.timeZone = TimeZone(abbreviation: "UTC")
-        formatter.dateFormat = "dd-MM-yy"
-        return formatter
-    }()
-}
-extension Date {
-   func formatToString(using formatter: DateFormatter) -> String {
-      return formatter.string(from: self)
-   }
+struct DateModel: Identifiable {
+    var id: String = UUID().uuidString
+    var day: Int
+    var date: Date
 }
 
-let date = Date()

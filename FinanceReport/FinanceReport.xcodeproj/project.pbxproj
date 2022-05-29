@@ -24,16 +24,33 @@
 		363249A727F31DDB00D36D1E /* DebtSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363249A627F31DDB00D36D1E /* DebtSettingsView.swift */; };
 		363249A927F322BB00D36D1E /* MyFundsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363249A827F322BB00D36D1E /* MyFundsModel.swift */; };
 		363249AB27F3247F00D36D1E /* MyFundsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363249AA27F3247F00D36D1E /* MyFundsViewModel.swift */; };
+		3655BEE728215CA300CD241E /* FactViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3655BEE628215CA300CD241E /* FactViewModel.swift */; };
+		3655BEEB28215D4D00CD241E /* FactIncomesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3655BEEA28215D4D00CD241E /* FactIncomesViewModel.swift */; };
+		3655BEED28215D6700CD241E /* FactIncomesSettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3655BEEC28215D6700CD241E /* FactIncomesSettingsViewModel.swift */; };
+		3655BEEF28215D9400CD241E /* FactExpensesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3655BEEE28215D9400CD241E /* FactExpensesViewModel.swift */; };
+		3655BEF128215DAD00CD241E /* FactExpensesSettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3655BEF028215DAD00CD241E /* FactExpensesSettingsViewModel.swift */; };
+		3655BEF328217E7300CD241E /* DateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3655BEF228217E7300CD241E /* DateModel.swift */; };
 		365A6CD5280C63A300F81AA1 /* PlanningExpenseSettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365A6CD4280C63A300F81AA1 /* PlanningExpenseSettingsViewModel.swift */; };
 		365C4D7727EF80CD008FEA61 /* FundsTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365C4D7627EF80CD008FEA61 /* FundsTabView.swift */; };
 		365C4D7927EF8368008FEA61 /* FundsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365C4D7827EF8368008FEA61 /* FundsView.swift */; };
 		365C4D7B27EF83F1008FEA61 /* DebtsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365C4D7A27EF83F1008FEA61 /* DebtsView.swift */; };
 		365C4D7E27EF8854008FEA61 /* FundSettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365C4D7D27EF8854008FEA61 /* FundSettingsViewModel.swift */; };
+		366B68FE281A7DDA0066FC19 /* FactIncomesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366B68FD281A7DDA0066FC19 /* FactIncomesModel.swift */; };
+		366B6900281A7DE90066FC19 /* FactExpensesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366B68FF281A7DE90066FC19 /* FactExpensesModel.swift */; };
+		366B6902281A7DF80066FC19 /* FactRemainderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366B6901281A7DF80066FC19 /* FactRemainderModel.swift */; };
+		366C487128367E2900CA42A6 /* FactExpensesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366C487028367E2900CA42A6 /* FactExpensesView.swift */; };
+		366C4873283680C600CA42A6 /* ListRowFactExpensesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366C4872283680C600CA42A6 /* ListRowFactExpensesView.swift */; };
+		366C48752836816700CA42A6 /* FactExpensesSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366C48742836816700CA42A6 /* FactExpensesSettingsView.swift */; };
 		36811AB127F9786F0024E528 /* MyFundsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36811AB027F9786F0024E528 /* MyFundsView.swift */; };
 		368F2C7327E8533B0042A93B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 368F2C7227E8533B0042A93B /* GoogleService-Info.plist */; };
 		368F2C7D27E86EE00042A93B /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368F2C7C27E86EE00042A93B /* AuthService.swift */; };
 		368F2C8027EA16CD0042A93B /* FundSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368F2C7F27EA16CD0042A93B /* FundSettingsView.swift */; };
 		36A2662B27EF0003006BC749 /* FundsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A2662A27EF0003006BC749 /* FundsViewModel.swift */; };
+		36AC517428219D3C00090AB1 /* FactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36AC517328219D3C00090AB1 /* FactView.swift */; };
+		36AC517628219D9000090AB1 /* UpperBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36AC517528219D9000090AB1 /* UpperBarView.swift */; };
+		36AC517928243D1300090AB1 /* FactIncomesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36AC517828243D1300090AB1 /* FactIncomesView.swift */; };
+		36AC517B282440E600090AB1 /* ListRowFactIncomesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36AC517A282440E600090AB1 /* ListRowFactIncomesView.swift */; };
+		36AC517D2824417900090AB1 /* FactIncomesSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36AC517C2824417900090AB1 /* FactIncomesSettingsView.swift */; };
 		36C20E5027BE3B5A00F7329A /* FinanceReportApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C20E4F27BE3B5A00F7329A /* FinanceReportApp.swift */; };
 		36C20E5227BE3B5A00F7329A /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C20E5127BE3B5A00F7329A /* AuthView.swift */; };
 		36C20E5427BE3B5A00F7329A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36C20E5327BE3B5A00F7329A /* Assets.xcassets */; };
@@ -72,16 +89,33 @@
 		363249A627F31DDB00D36D1E /* DebtSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebtSettingsView.swift; sourceTree = "<group>"; };
 		363249A827F322BB00D36D1E /* MyFundsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFundsModel.swift; sourceTree = "<group>"; };
 		363249AA27F3247F00D36D1E /* MyFundsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFundsViewModel.swift; sourceTree = "<group>"; };
+		3655BEE628215CA300CD241E /* FactViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactViewModel.swift; sourceTree = "<group>"; };
+		3655BEEA28215D4D00CD241E /* FactIncomesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactIncomesViewModel.swift; sourceTree = "<group>"; };
+		3655BEEC28215D6700CD241E /* FactIncomesSettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactIncomesSettingsViewModel.swift; sourceTree = "<group>"; };
+		3655BEEE28215D9400CD241E /* FactExpensesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactExpensesViewModel.swift; sourceTree = "<group>"; };
+		3655BEF028215DAD00CD241E /* FactExpensesSettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactExpensesSettingsViewModel.swift; sourceTree = "<group>"; };
+		3655BEF228217E7300CD241E /* DateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateModel.swift; sourceTree = "<group>"; };
 		365A6CD4280C63A300F81AA1 /* PlanningExpenseSettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanningExpenseSettingsViewModel.swift; sourceTree = "<group>"; };
 		365C4D7627EF80CD008FEA61 /* FundsTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundsTabView.swift; sourceTree = "<group>"; };
 		365C4D7827EF8368008FEA61 /* FundsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundsView.swift; sourceTree = "<group>"; };
 		365C4D7A27EF83F1008FEA61 /* DebtsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebtsView.swift; sourceTree = "<group>"; };
 		365C4D7D27EF8854008FEA61 /* FundSettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundSettingsViewModel.swift; sourceTree = "<group>"; };
+		366B68FD281A7DDA0066FC19 /* FactIncomesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactIncomesModel.swift; sourceTree = "<group>"; };
+		366B68FF281A7DE90066FC19 /* FactExpensesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactExpensesModel.swift; sourceTree = "<group>"; };
+		366B6901281A7DF80066FC19 /* FactRemainderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactRemainderModel.swift; sourceTree = "<group>"; };
+		366C487028367E2900CA42A6 /* FactExpensesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactExpensesView.swift; sourceTree = "<group>"; };
+		366C4872283680C600CA42A6 /* ListRowFactExpensesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRowFactExpensesView.swift; sourceTree = "<group>"; };
+		366C48742836816700CA42A6 /* FactExpensesSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactExpensesSettingsView.swift; sourceTree = "<group>"; };
 		36811AB027F9786F0024E528 /* MyFundsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFundsView.swift; sourceTree = "<group>"; };
 		368F2C7227E8533B0042A93B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		368F2C7C27E86EE00042A93B /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		368F2C7F27EA16CD0042A93B /* FundSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundSettingsView.swift; sourceTree = "<group>"; };
 		36A2662A27EF0003006BC749 /* FundsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundsViewModel.swift; sourceTree = "<group>"; };
+		36AC517328219D3C00090AB1 /* FactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactView.swift; sourceTree = "<group>"; };
+		36AC517528219D9000090AB1 /* UpperBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpperBarView.swift; sourceTree = "<group>"; };
+		36AC517828243D1300090AB1 /* FactIncomesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactIncomesView.swift; sourceTree = "<group>"; };
+		36AC517A282440E600090AB1 /* ListRowFactIncomesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRowFactIncomesView.swift; sourceTree = "<group>"; };
+		36AC517C2824417900090AB1 /* FactIncomesSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactIncomesSettingsView.swift; sourceTree = "<group>"; };
 		36C20E4C27BE3B5A00F7329A /* FinanceReport.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinanceReport.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36C20E4F27BE3B5A00F7329A /* FinanceReportApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceReportApp.swift; sourceTree = "<group>"; };
 		36C20E5127BE3B5A00F7329A /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
@@ -153,6 +187,7 @@
 				363249AC27F3248900D36D1E /* MyFundsViewModels */,
 				361C727828009F240003C09E /* LastMonthViewModels */,
 				36D9BA6E280339F5001458E4 /* PlanningViewModels */,
+				3655BEE528215C8300CD241E /* FactViewModels */,
 			);
 			path = MainPageViewModels;
 			sourceTree = "<group>";
@@ -167,13 +202,63 @@
 			path = MyFundsViewModels;
 			sourceTree = "<group>";
 		};
+		3655BEE528215C8300CD241E /* FactViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				3655BEE628215CA300CD241E /* FactViewModel.swift */,
+				3655BEE828215D0500CD241E /* FactIncomesViewModels */,
+				3655BEE928215D1700CD241E /* FactExpensesViewModels */,
+			);
+			path = FactViewModels;
+			sourceTree = "<group>";
+		};
+		3655BEE828215D0500CD241E /* FactIncomesViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				3655BEEA28215D4D00CD241E /* FactIncomesViewModel.swift */,
+				3655BEEC28215D6700CD241E /* FactIncomesSettingsViewModel.swift */,
+			);
+			path = FactIncomesViewModels;
+			sourceTree = "<group>";
+		};
+		3655BEE928215D1700CD241E /* FactExpensesViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				3655BEEE28215D9400CD241E /* FactExpensesViewModel.swift */,
+				3655BEF028215DAD00CD241E /* FactExpensesSettingsViewModel.swift */,
+			);
+			path = FactExpensesViewModels;
+			sourceTree = "<group>";
+		};
+		366B68FC281A7DAE0066FC19 /* FactModels */ = {
+			isa = PBXGroup;
+			children = (
+				366B68FD281A7DDA0066FC19 /* FactIncomesModel.swift */,
+				366B68FF281A7DE90066FC19 /* FactExpensesModel.swift */,
+				366B6901281A7DF80066FC19 /* FactRemainderModel.swift */,
+			);
+			path = FactModels;
+			sourceTree = "<group>";
+		};
+		366C486F28367E0C00CA42A6 /* FactExpensesViews */ = {
+			isa = PBXGroup;
+			children = (
+				366C487028367E2900CA42A6 /* FactExpensesView.swift */,
+				366C4872283680C600CA42A6 /* ListRowFactExpensesView.swift */,
+				366C48742836816700CA42A6 /* FactExpensesSettingsView.swift */,
+			);
+			path = FactExpensesViews;
+			sourceTree = "<group>";
+		};
 		36811AB227F978E60024E528 /* MainPageViews */ = {
 			isa = PBXGroup;
 			children = (
 				361FFC1227C281F50020F731 /* MainPageView.swift */,
+				36AC517528219D9000090AB1 /* UpperBarView.swift */,
 				36811AB327F988300024E528 /* MyFundsViews */,
 				361C727128009BBC0003C09E /* LastMonthViews */,
 				36D9BA6B28033920001458E4 /* PlanningViews */,
+				36AC517228219CDD00090AB1 /* FactViews */,
 			);
 			path = MainPageViews;
 			sourceTree = "<group>";
@@ -253,6 +338,26 @@
 			path = Features;
 			sourceTree = "<group>";
 		};
+		36AC517228219CDD00090AB1 /* FactViews */ = {
+			isa = PBXGroup;
+			children = (
+				36AC517328219D3C00090AB1 /* FactView.swift */,
+				36AC517728243CFD00090AB1 /* FactIncomesViews */,
+				366C486F28367E0C00CA42A6 /* FactExpensesViews */,
+			);
+			path = FactViews;
+			sourceTree = "<group>";
+		};
+		36AC517728243CFD00090AB1 /* FactIncomesViews */ = {
+			isa = PBXGroup;
+			children = (
+				36AC517828243D1300090AB1 /* FactIncomesView.swift */,
+				36AC517A282440E600090AB1 /* ListRowFactIncomesView.swift */,
+				36AC517C2824417900090AB1 /* FactIncomesSettingsView.swift */,
+			);
+			path = FactIncomesViews;
+			sourceTree = "<group>";
+		};
 		36C20E4327BE3B5A00F7329A = {
 			isa = PBXGroup;
 			children = (
@@ -322,13 +427,13 @@
 			path = PlanningIncomesViewModels;
 			sourceTree = "<group>";
 		};
-		36CEC6E22805A7B900D27417 /* PlanningExpensesViewModel */ = {
+		36CEC6E22805A7B900D27417 /* PlanningExpensesViewModels */ = {
 			isa = PBXGroup;
 			children = (
 				36D9BA7D28033D1F001458E4 /* PlanningExpensesViewModel.swift */,
 				365A6CD4280C63A300F81AA1 /* PlanningExpenseSettingsViewModel.swift */,
 			);
-			path = PlanningExpensesViewModel;
+			path = PlanningExpensesViewModels;
 			sourceTree = "<group>";
 		};
 		36D3382B28043E4F00DA2810 /* PlanningModels */ = {
@@ -348,6 +453,8 @@
 				36811AB827F9891B0024E528 /* MyFundsModels */,
 				361C726C28009B320003C09E /* LastMonthModels */,
 				36D3382B28043E4F00DA2810 /* PlanningModels */,
+				366B68FC281A7DAE0066FC19 /* FactModels */,
+				3655BEF228217E7300CD241E /* DateModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -384,7 +491,7 @@
 			children = (
 				36D9BA7528033BC9001458E4 /* PlanningViewModel.swift */,
 				36CEC6E12805A7A500D27417 /* PlanningIncomesViewModels */,
-				36CEC6E22805A7B900D27417 /* PlanningExpensesViewModel */,
+				36CEC6E22805A7B900D27417 /* PlanningExpensesViewModels */,
 			);
 			path = PlanningViewModels;
 			sourceTree = "<group>";
@@ -470,23 +577,35 @@
 			files = (
 				363249A927F322BB00D36D1E /* MyFundsModel.swift in Sources */,
 				361C727728009F1B0003C09E /* LastMonthSettingsViewModel.swift in Sources */,
+				3655BEF328217E7300CD241E /* DateModel.swift in Sources */,
 				363249A727F31DDB00D36D1E /* DebtSettingsView.swift in Sources */,
 				36D3382F28043ED600DA2810 /* PlanningExpensesModel.swift in Sources */,
 				36E01E6227EE2AE20078A907 /* FundModel.swift in Sources */,
+				366C4873283680C600CA42A6 /* ListRowFactExpensesView.swift in Sources */,
+				366B68FE281A7DDA0066FC19 /* FactIncomesModel.swift in Sources */,
 				36D9BA7828033C02001458E4 /* PlanningIncomesView.swift in Sources */,
 				361C727028009BAA0003C09E /* LastMonthView.swift in Sources */,
 				36CEC6DC2805A3D600D27417 /* ListRowPlanningExpensesView.swift in Sources */,
 				36D9BA7A28033C17001458E4 /* PlanningExpensesView.swift in Sources */,
 				368F2C8027EA16CD0042A93B /* FundSettingsView.swift in Sources */,
 				361C726E28009B6C0003C09E /* LastMonthModel.swift in Sources */,
+				366C487128367E2900CA42A6 /* FactExpensesView.swift in Sources */,
 				363249A327F31CE000D36D1E /* DebtsViewModel.swift in Sources */,
+				36AC517628219D9000090AB1 /* UpperBarView.swift in Sources */,
+				36AC517928243D1300090AB1 /* FactIncomesView.swift in Sources */,
+				36AC517D2824417900090AB1 /* FactIncomesSettingsView.swift in Sources */,
 				36D9BA7C28033D0A001458E4 /* PlanningIncomesViewModel.swift in Sources */,
+				3655BEF128215DAD00CD241E /* FactExpensesSettingsViewModel.swift in Sources */,
+				366B6902281A7DF80066FC19 /* FactRemainderModel.swift in Sources */,
 				363249A127F31C2000D36D1E /* ListRowDebtsView.swift in Sources */,
 				363249AB27F3247F00D36D1E /* MyFundsViewModel.swift in Sources */,
 				36D3383128043F4C00DA2810 /* PlanningRemainderModel.swift in Sources */,
 				361C727328009CF50003C09E /* LastMonthSettingsView.swift in Sources */,
 				365A6CD5280C63A300F81AA1 /* PlanningExpenseSettingsViewModel.swift in Sources */,
+				36AC517428219D3C00090AB1 /* FactView.swift in Sources */,
 				365C4D7E27EF8854008FEA61 /* FundSettingsViewModel.swift in Sources */,
+				366C48752836816700CA42A6 /* FactExpensesSettingsView.swift in Sources */,
+				366B6900281A7DE90066FC19 /* FactExpensesModel.swift in Sources */,
 				36D8A39C27E1CD2100803AD5 /* DateFormatter.swift in Sources */,
 				363249A527F31D7500D36D1E /* DebtSettingsViewModel.swift in Sources */,
 				365C4D7727EF80CD008FEA61 /* FundsTabView.swift in Sources */,
@@ -495,17 +614,22 @@
 				36CEC6DA2805A3C000D27417 /* ListRowPlanningIncomesView.swift in Sources */,
 				3632499F27F31BDF00D36D1E /* DebtModel.swift in Sources */,
 				36D3382D28043E8D00DA2810 /* PlanningIncomesModel.swift in Sources */,
+				3655BEED28215D6700CD241E /* FactIncomesSettingsViewModel.swift in Sources */,
 				36CEC6DE2805A40700D27417 /* PlanningIncomesSettingsView.swift in Sources */,
 				365C4D7927EF8368008FEA61 /* FundsView.swift in Sources */,
+				3655BEE728215CA300CD241E /* FactViewModel.swift in Sources */,
 				36C20E5227BE3B5A00F7329A /* AuthView.swift in Sources */,
 				36D9BA7628033BC9001458E4 /* PlanningViewModel.swift in Sources */,
 				36D9BA6D2803396A001458E4 /* PlanningView.swift in Sources */,
 				36CEC6E42805A7D700D27417 /* PlanningIncomesSettingsViewModel.swift in Sources */,
 				365C4D7B27EF83F1008FEA61 /* DebtsView.swift in Sources */,
+				3655BEEF28215D9400CD241E /* FactExpensesViewModel.swift in Sources */,
 				36C20E5027BE3B5A00F7329A /* FinanceReportApp.swift in Sources */,
 				361FFC1327C281F50020F731 /* MainPageView.swift in Sources */,
 				3632499227F3047C00D36D1E /* MainPageViewModel.swift in Sources */,
 				36811AB127F9786F0024E528 /* MyFundsView.swift in Sources */,
+				36AC517B282440E600090AB1 /* ListRowFactIncomesView.swift in Sources */,
+				3655BEEB28215D4D00CD241E /* FactIncomesViewModel.swift in Sources */,
 				36A2662B27EF0003006BC749 /* FundsViewModel.swift in Sources */,
 				368F2C7D27E86EE00042A93B /* AuthService.swift in Sources */,
 				361C727528009D4A0003C09E /* LastMonthViewModel.swift in Sources */,

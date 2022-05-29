@@ -1,22 +1,22 @@
 //
-//  PlanningExpensesView.swift
+//  FactIncomesView.swift
 //  FinanceReport
 //
-//  Created by Олег Попов on 10.04.2022.
+//  Created by Олег Попов on 05.05.2022.
 //
 
 import SwiftUI
 
-struct PlanningExpensesView: View {
-    
+struct FactIncomesView: View {
+
     @Environment(\.dismiss) var dismiss
-    
-    @ObservedObject var viewModel = PlanningExpensesViewModel.shared
-    @ObservedObject var remainderViewModel = PlanningViewModel.shared
+
+    @ObservedObject var viewModel = FactIncomesViewModel.shared
+    @ObservedObject var remainderViewModel = FactViewModel.shared
     @State private var isActionSheetShow = false
-    
-    @State var expenseToDelete: PlanningExpensesModel?
-    
+
+    @State var incomeToDelete: FactIncomesModel?
+
     var body: some View {
         ZStack{
             VStack{
@@ -28,13 +28,13 @@ struct PlanningExpensesView: View {
                                     Text(date.formatToString(using: .ddMMyy))
                                         .font(.system(size: 14))
                                         .padding(.leading)
-                                    
+
                                     Spacer()
-                                    
+
                                     Button {
-                                        PlanningViewModel.shared.setPlanningExpensesTotal(score: remainderViewModel.planningExpensesTotal)
-                                        PlanningViewModel.shared.setPlanningRemainderSum(score: remainderViewModel.planningRemainderTotal)
-                                        print("Предполагаемые расходы: \(viewModel.sumPlanningExpenses()) ₽,  Предполагаемый остаток \(remainderViewModel.planningRemainderSum()) ₽")
+                                        FactViewModel.shared.setFactIncomesTotal(score: remainderViewModel.factIncomesTotal)
+                                        FactViewModel.shared.setFactRemainderSum(score: remainderViewModel.factRemainderTotal)
+                                        print("Фактические доходы: \(viewModel.sumFactIncomes()) ₽,  Средства на руках \(remainderViewModel.factRemainderSum()) ₽")
                                         self.dismiss()
                                     } label: {
                                         Text("На главную")
@@ -44,13 +44,13 @@ struct PlanningExpensesView: View {
                             }
                         }
                         HStack{
-                            Text("Предполагаемые расходы: \(viewModel.sumPlanningExpenses()) ₽")
+                            Text("Фактические доходы: \(viewModel.sumFactIncomes()) ₽")
                                 .padding()
                             Spacer()
-                        
+
                         Button {
-                            viewModel.planningExpensesArray.append(PlanningExpensesModel())
-                            print("\(viewModel.planningExpensesArray.count) статей расхода")
+                            viewModel.factIncomesArray.append(FactIncomesModel())
+                            print("\(viewModel.factIncomesArray.count) статей дохода")
                         } label: {
                             HStack {
                                // Spacer()
@@ -61,11 +61,11 @@ struct PlanningExpensesView: View {
                         }
                     }
                     List{
-                        ForEach(viewModel.planningExpensesArray, id: \.self) { planningExpense in
-                            ListRowPlanningExpensesView(planningExpense: planningExpense)
+                        ForEach(viewModel.factIncomesArray, id: \.self) { factIncome in
+                            ListRowFactIncomesView(factIncome: factIncome)
                                 .swipeActions {
                                     Button {
-                                        self.expenseToDelete = planningExpense
+                                        self.incomeToDelete = factIncome
                                         isActionSheetShow.toggle()
                                     } label: {
                                         Text("Удалить")
@@ -81,13 +81,13 @@ struct PlanningExpensesView: View {
                     .mask(LinearGradient(gradient: Gradient(colors: [.black, .black, .black, .black, .black, .black, .black, .black, .black,  .clear]), startPoint: .top, endPoint: .bottom))
                     .confirmationDialog("Точно удалить?", isPresented: $isActionSheetShow, titleVisibility: .visible) {
                         Button{
-                            viewModel.planningExpensesArray.removeAll() { deletedExpense in
-                                deletedExpense.id == expenseToDelete!.id
+                            viewModel.factIncomesArray.removeAll() { deletedIncome in
+                                deletedIncome.id == incomeToDelete!.id
                             }
                         } label: {
                             Text("Да")
                         }
-                        
+
                         Button(role: .cancel) {
                             //нет действия
                         } label: {
@@ -101,8 +101,8 @@ struct PlanningExpensesView: View {
     }
 }
 
-struct PlanningExpensesView_Previews: PreviewProvider {
+struct FactIncomesView_Previews: PreviewProvider {
     static var previews: some View {
-        PlanningExpensesView()
+        FactIncomesView()
     }
 }

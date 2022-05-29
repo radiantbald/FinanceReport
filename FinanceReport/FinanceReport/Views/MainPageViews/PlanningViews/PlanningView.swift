@@ -16,15 +16,13 @@ struct PlanningView: View{ // Предполагаемые доходы
     @State private var arePlanningIncomesShown = false
     @State private var arePlanningExpensesShown = false
     
-   // @State var planningRemainder: PlanningModel = PlanningModel()
-    
     var body: some View {
         
         VStack (spacing: 0) {
             
             Button {
                 arePlanningIncomesShown.toggle()
-                print("Календарь доходов")
+                print("Предполагаемые доходы")
             } label: {
                 VStack {
                     HStack {

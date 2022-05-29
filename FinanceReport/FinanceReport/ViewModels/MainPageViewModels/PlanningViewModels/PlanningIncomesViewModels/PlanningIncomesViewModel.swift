@@ -45,6 +45,4 @@ class PlanningIncomesViewModel: ObservableObject {
         return planningIncomesSum
         }
     }
-    
-    
 }

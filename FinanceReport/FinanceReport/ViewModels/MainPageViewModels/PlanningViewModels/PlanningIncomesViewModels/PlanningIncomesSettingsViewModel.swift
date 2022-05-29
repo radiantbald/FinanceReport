@@ -11,7 +11,7 @@ class PlanningIncomesSettingsViewModel: ObservableObject {
     
     @Published var planningIncome: PlanningIncomesModel
     
-    init(planningIncome: PlanningIncomesModel){
+    init(planningIncome: PlanningIncomesModel) {
         self.planningIncome = planningIncome
     }
 }
